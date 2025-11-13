@@ -749,13 +749,6 @@ a:focus {
   }
 }
 
-/* .hero {
-  background: radial-gradient(1200px 600px at 20% 15%, #F8E1F1 0%, rgba(248,225,241,0) 60%),
-              radial-gradient(1000px 520px at 80% 20%, #E9E0FF 0%, rgba(233,224,255,0) 65%),
-              linear-gradient(180deg, #F7E8FF 0%, #FFFFFF 60%);
-} */
-
-/* Pink–Lavender gradient (force apply on hero) */
 section.hero { position: relative; background: transparent !important; }
 
 section.hero::before {
