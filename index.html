@@ -9,127 +9,216 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+            border-color: rgba(147, 51, 234, 0.3);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #7c3aed 0%, #2563eb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-tag {
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            background: #f3f4f6;
+            color: #6b7280;
+            margin-right: 8px;
         }
     </style>
 </head>
-<body class="bg-gradient-to-b from-purple-100 via-white to-white min-h-screen text-slate-800">
+<body class="bg-slate-50 min-h-screen text-slate-800">
 
-    <nav class="flex justify-between items-center px-8 py-4 w-full max-w-7xl mx-auto">
-        <div class="font-bold text-xl flex items-center gap-2">
-            <i class="fa-solid fa-robot text-purple-600"></i>
-            <span>SI-Agents Survey</span>
-        </div>
-        <div class="hidden md:flex gap-6 text-sm font-medium text-slate-600">
-            <a href="#" class="hover:text-purple-600 transition">More Research</a>
-            <a href="#" class="hover:text-purple-600 transition">Lab Home</a>
-            <a href="#" class="hover:text-purple-600 transition"><i class="fa-brands fa-github text-lg"></i></a>
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">
+        <div class="flex justify-between items-center px-8 py-4 w-full max-w-7xl mx-auto">
+            <div class="font-bold text-xl flex items-center gap-2">
+                <i class="fa-solid fa-robot text-purple-600"></i>
+                <span class="tracking-tight">SI-Agents <span class="text-slate-400 font-light italic">Survey</span></span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
+                <a href="#abstract" class="hover:text-purple-600 transition">Abstract</a>
+                <a href="#taxonomy" class="hover:text-purple-600 transition">Taxonomy</a>
+                <a href="#citation" class="hover:text-purple-600 transition">Citation</a>
+                <a href="https://github.com/your-repo" target="_blank" class="hover:text-purple-600 transition text-lg leading-none"><i class="fa-brands fa-github"></i></a>
+            </div>
         </div>
     </nav>
 
-    <main class="flex flex-col items-center justify-center mt-12 px-4 text-center">
-        
-        <div class="mb-4">
-             <div class="text-4xl font-extrabold tracking-tighter text-slate-900 flex items-center justify-center gap-3">
-                <span class="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-blue-600">
-                    SI-AGENTS
-                </span>
-             </div>
+    <header class="flex flex-col items-center justify-center pt-20 pb-12 px-4 text-center bg-gradient-to-b from-purple-50 to-slate-50">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-xs font-semibold text-slate-500 mb-6 shadow-sm">
+            <span class="relative flex h-2 w-2">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+            </span>
+            2025 Comprehensive Review
         </div>
 
-        <h1 class="text-3xl md:text-5xl font-bold max-w-4xl leading-tight mb-4">
-            Self-Improvement in Foundation Model <br> Based Agentic Systems
+        <h1 class="text-4xl md:text-6xl font-extrabold max-w-5xl leading-[1.1] mb-6 text-slate-900 tracking-tight">
+            Self-Improvement in Foundation Model <br> Based <span class="gradient-text">Agentic Systems</span>
         </h1>
         
-        <p class="text-lg md:text-xl text-slate-500 max-w-2xl mb-2 font-light">
-            A Comprehensive Survey on Architectures, Strategies, and Future Directions
-        </p>
-        <p class="text-sm text-purple-600 font-medium bg-purple-50 px-3 py-1 rounded-full mb-8 border border-purple-100">
-            Navigate the landscape of LLM agents capable of recursive self-optimization
+        <p class="text-lg md:text-xl text-slate-500 max-w-2xl mb-10 font-light">
+            An exploration of architectures that enable LLM agents to autonomously refine their policy, tools, and world-understanding.
         </p>
 
         <div class="flex flex-wrap justify-center gap-4 mb-16">
-            <a href="#" class="flex items-center gap-2 bg-slate-900 text-white px-5 py-2.5 rounded-lg hover:bg-slate-700 transition shadow-lg hover:shadow-xl">
-                <i class="fa-brands fa-github"></i>
-                <span>Curated List</span>
-                <span class="bg-slate-700 text-xs px-2 py-0.5 rounded ml-1 text-slate-200">
-                    <i class="fa-regular fa-star text-[10px]"></i> 1.2k
-                </span>
+            <a href="https://github.com/your-repo" class="flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-xl hover:bg-slate-800 transition shadow-xl scale-100 hover:scale-105 active:scale-95">
+                <i class="fa-brands fa-github text-lg"></i>
+                <span class="font-semibold">Curated Paper List</span>
             </a>
-
-            <a href="#" class="flex items-center gap-2 bg-white text-slate-700 border border-slate-200 px-5 py-2.5 rounded-lg hover:border-purple-300 hover:text-purple-600 transition shadow-sm">
-                <i class="fa-regular fa-file-pdf"></i>
-                <span>Read Paper</span>
-            </a>
-
-            <a href="#" class="flex items-center gap-2 bg-white text-slate-700 border border-slate-200 px-5 py-2.5 rounded-lg hover:border-purple-300 hover:text-purple-600 transition shadow-sm">
-                <i class="fa-solid fa-quote-right"></i>
-                <span>BibTeX</span>
+            <a href="#" class="flex items-center gap-2 bg-white text-slate-700 border border-slate-200 px-6 py-3 rounded-xl hover:border-purple-300 hover:text-purple-600 transition shadow-sm font-semibold">
+                <i class="fa-regular fa-file-pdf text-lg text-red-500"></i>
+                <span>Preprint Paper</span>
             </a>
         </div>
+    </header>
 
-        <section class="max-w-6xl w-full mx-auto mb-20">
-            <div class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Survey Taxonomy & Framework</div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center opacity-80 hover:opacity-100 transition">
-                    <h3 class="font-bold text-slate-600 mb-4">Static / Human-in-the-loop Agents</h3>
-                    <div class="border-2 border-dashed border-slate-300 rounded bg-slate-50 w-full h-48 flex items-center justify-center text-slate-400 text-sm">
-                        [Diagram: Traditional Prompt Engineering / SFT]
-                    </div>
-                    <p class="mt-4 text-sm text-slate-500">Dependent on external feedback or static datasets.</p>
-                </div>
+    <section id="abstract" class="max-w-4xl mx-auto px-6 py-16">
+        <div class="glass-card p-8 md:p-12 rounded-3xl relative">
+            <div class="absolute -top-4 left-8 bg-purple-600 text-white text-xs font-bold px-4 py-1.5 rounded-lg shadow-lg">ABSTRACT</div>
+            <p class="text-slate-600 leading-relaxed text-lg italic">
+                "Foundation models have revolutionized agentic systems, yet the transition from static prompt-following to autonomous self-improvement remains a critical frontier. This survey systematically categorizes the mechanisms of self-evolution into <b>Foundation Model Improvement</b> and <b>Scaffolding Improvement</b>. We analyze how agents leverage self-generated data, environment-interactive experiences, and recursive prompt optimization to transcend their initial constraints..."
+            </p>
+        </div>
+    </section>
 
-                <div class="glass-card p-6 rounded-xl border-2 border-purple-100 shadow-xl bg-white relative overflow-hidden">
-                    <div class="absolute top-0 right-0 w-20 h-20 bg-green-100 rounded-full blur-2xl -mr-10 -mt-10"></div>
-                    
-                    <h3 class="font-bold text-green-700 mb-4 flex items-center justify-center gap-2">
-                        <i class="fa-solid fa-arrows-spin"></i> Self-Improvement Loop (Our Focus)
-                    </h3>
-                    
-                    <div class="bg-gradient-to-br from-green-50 to-blue-50 rounded border border-green-100 w-full h-48 flex items-center justify-center text-green-800 text-sm relative">
-                        <div class="flex flex-col items-center gap-2">
-                            <div class="bg-white px-3 py-1 shadow rounded border text-xs">Environment Interaction</div>
-                            <div class="h-4 w-0.5 bg-slate-300"></div>
-                            <div class="bg-white px-3 py-1 shadow rounded border text-xs font-bold text-purple-600">Reflection & Updating</div>
-                            <div class="h-4 w-0.5 bg-slate-300"></div>
-                            <div class="bg-white px-3 py-1 shadow rounded border text-xs">Policy Refinement</div>
-                         </div>
+    <section id="taxonomy" class="max-w-6xl w-full mx-auto py-20 px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Taxonomy & Framework</h2>
+            <div class="h-1 w-20 bg-purple-600 mx-auto rounded-full"></div>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            <div class="glass-card p-8 rounded-3xl border-t-4 border-t-blue-500">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                        <i class="fa-solid fa-brain"></i>
                     </div>
-                    
-                    <div class="mt-4 flex justify-between text-xs text-slate-600 font-medium px-4">
-                        <span class="flex items-center gap-1"><i class="fa-solid fa-brain text-purple-500"></i> Intrinsic Motivation</span>
-                        <span class="flex items-center gap-1"><i class="fa-solid fa-database text-blue-500"></i> Self-Generated Data</span>
+                    <div>
+                        <h3 class="font-bold text-xl text-slate-800">Foundation Model Improvement</h3>
+                        <p class="text-xs text-slate-400 uppercase tracking-widest font-bold">Category §4</p>
                     </div>
                 </div>
-
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3 p-3 rounded-xl hover:bg-blue-50 transition">
+                        <span class="section-tag">4.1</span>
+                        <div>
+                            <p class="font-semibold text-sm">Self-Generated Data</p>
+                            <p class="text-xs text-slate-500">Distillation from synthetic trajectories & MoAA alignment.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3 p-3 rounded-xl hover:bg-blue-50 transition">
+                        <span class="section-tag">4.2</span>
+                        <div>
+                            <p class="font-semibold text-sm">Self-Generated Supervision</p>
+                            <p class="text-xs text-slate-500">Constitutional AI, SER, and self-verification loops.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3 p-3 rounded-xl hover:bg-blue-50 transition">
+                        <span class="section-tag">4.3</span>
+                        <div>
+                            <p class="font-semibold text-sm">Self-Generated Experience</p>
+                            <p class="text-xs text-slate-500">WebRL & RAGEN: Scaling via world models and environment interaction.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <p class="text-xs text-slate-400 mt-4">Comparison of traditional agentic workflows vs. self-improving paradigms analyzed in this survey.</p>
-        </section>
 
-        <div class="mb-12">
-            <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-slate-600 text-sm md:text-base">
-                <span class="hover:text-purple-600 cursor-pointer transition">Author One<sup>1</sup></span>
-                <span class="hover:text-purple-600 cursor-pointer transition">Author Two<sup>1</sup></span>
-                <span class="hover:text-purple-600 cursor-pointer transition">Author Three<sup>2</sup></span>
-                <span class="hover:text-purple-600 cursor-pointer transition">Author Four<sup>1,2</sup></span>
-            </div>
-            <div class="mt-2 text-xs text-slate-400">
-                1. University Name &nbsp;&nbsp; 2. Research Institute
+            <div class="glass-card p-8 rounded-3xl border-t-4 border-t-purple-500">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-xl text-slate-800">Scaffolding Improvement</h3>
+                        <p class="text-xs text-slate-400 uppercase tracking-widest font-bold">Category §5</p>
+                    </div>
+                </div>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3 p-3 rounded-xl hover:bg-purple-50 transition">
+                        <span class="section-tag">5.1</span>
+                        <div>
+                            <p class="font-semibold text-sm">Prompt Optimization</p>
+                            <p class="text-xs text-slate-500">Iterative refinement (Self-Refine) and evolutionary APE.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3 p-3 rounded-xl hover:bg-purple-50 transition">
+                        <span class="section-tag">5.2</span>
+                        <div>
+                            <p class="font-semibold text-sm">Memory & Tool Evolution</p>
+                            <p class="text-xs text-slate-500">Dynamic skill discovery via SkillWeaver and Mem0 memory.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3 p-3 rounded-xl hover:bg-purple-50 transition">
+                        <span class="section-tag">5.4</span>
+                        <div>
+                            <p class="font-semibold text-sm">Full Scaffolding (Recursive)</p>
+                            <p class="text-xs text-slate-500">Gödel Agents: Enabling meta-level self-modification.</p>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
+    </section>
 
-    </main>
-    
-    <footer class="py-8 text-center text-slate-300 text-sm">
-        <p>&copy; 2024 SI-Agents Survey Team.</p>
+    <section id="citation" class="max-w-4xl mx-auto px-6 py-20 text-center">
+        <h2 class="text-2xl font-bold mb-8 flex items-center justify-center gap-2">
+            <i class="fa-solid fa-quote-left text-purple-400"></i> Cite our Work
+        </h2>
+        <div class="bg-slate-900 rounded-2xl p-6 text-left relative group">
+            <button onclick="copyBib()" class="absolute top-4 right-4 bg-slate-700 hover:bg-purple-600 text-white text-xs px-3 py-1.5 rounded-lg transition opacity-0 group-hover:opacity-100">
+                <i class="fa-regular fa-copy mr-1"></i> Copy
+            </button>
+            <pre id="bibtex" class="text-slate-300 text-xs md:text-sm font-mono overflow-x-auto">
+@article{si_agents_survey2025,
+  title={Self-Improvement in Foundation Model Based Agentic Systems: A Survey},
+  author={Name, Author and Others},
+  journal={arXiv preprint arXiv:2501.XXXXX},
+  year={2025}
+}</pre>
+        </div>
+    </section>
+
+    <section class="max-w-4xl mx-auto pb-24 px-6 text-center border-t border-slate-200 pt-16">
+        <div class="flex flex-wrap justify-center gap-x-12 gap-y-6 mb-8">
+            <div class="flex flex-col">
+                <span class="font-bold text-slate-900 hover:text-purple-600 cursor-pointer transition">Author One*</span>
+                <span class="text-xs text-slate-400 font-medium tracking-tight">University Name</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="font-bold text-slate-900 hover:text-purple-600 cursor-pointer transition">Author Two*</span>
+                <span class="text-xs text-slate-400 font-medium tracking-tight">Lab Name</span>
+            </div>
+            <div class="flex flex-col">
+                <span class="font-bold text-slate-900 hover:text-purple-600 cursor-pointer transition">Author Three</span>
+                <span class="text-xs text-slate-400 font-medium tracking-tight">Institute</span>
+            </div>
+        </div>
+        <p class="text-xs text-slate-400 italic font-light">
+            * Equal contribution. Contact: contact@lab.edu
+        </p>
+    </section>
+
+    <footer class="py-12 bg-slate-900 text-slate-500 text-center text-sm border-t border-slate-800">
+        <p>&copy; 2026 SI-Agents Survey Team. Built with Tailwind CSS.</p>
     </footer>
 
+    <script>
+        function copyBib() {
+            const bibText = document.getElementById('bibtex').innerText;
+            navigator.clipboard.writeText(bibText).then(() => {
+                alert('BibTeX copied to clipboard!');
+            });
+        }
+    </script>
 </body>
 </html>
-
