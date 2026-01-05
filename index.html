@@ -34,6 +34,30 @@
             color: #6b7280;
             margin-right: 8px;
         }
+        /* Accordion Styles */
+        .accordion-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .accordion-header:hover {
+            background: linear-gradient(135deg, #5568d3 0%, #6a4093 100%);
+            transform: translateX(2px);
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .accordion-content.active {
+            max-height: 2000px;
+        }
+        .accordion-icon {
+            transition: transform 0.3s ease;
+        }
+        .accordion-icon.rotate {
+            transform: rotate(45deg);
+        }
     </style>
 </head>
 <body class="bg-slate-50 min-h-screen text-slate-800">
@@ -46,13 +70,13 @@
             </div>
             <div class="hidden md:flex gap-8 text-sm font-medium text-slate-600">
                 <a href="#abstract" class="hover:text-purple-600 transition">Abstract</a>
+                <a href="#comparison" class="hover:text-purple-600 transition">Comparison</a>
                 <a href="#taxonomy" class="hover:text-purple-600 transition">Taxonomy</a>
                 <a href="#citation" class="hover:text-purple-600 transition">Citation</a>
-                <a href="https://github.com/your-repo" target="_blank" class="hover:text-purple-600 transition text-lg leading-none"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents" target="_blank" class="hover:text-purple-600 transition text-lg leading-none"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
     </nav>
-
     <header class="flex flex-col items-center justify-center pt-20 pb-12 px-4 text-center bg-gradient-to-b from-purple-50 to-slate-50">
         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-slate-200 text-xs font-semibold text-slate-500 mb-6 shadow-sm">
             <span class="relative flex h-2 w-2">
@@ -63,15 +87,15 @@
         </div>
 
         <h1 class="text-4xl md:text-6xl font-extrabold max-w-5xl leading-[1.1] mb-6 text-slate-900 tracking-tight">
-            Self-Improvement in Foundation Model <br> Based <span class="gradient-text">Agentic Systems</span>
+            Self-Improvement in Foundation Model Based <br> <span class="gradient-text">Agentic Systems</span>
         </h1>
         
         <p class="text-lg md:text-xl text-slate-500 max-w-2xl mb-10 font-light">
-            An exploration of architectures that enable LLM agents to autonomously refine their policy, tools, and world-understanding.
+            A Comprehensive Survey on Architectures, Strategies, and Future Directions
         </p>
 
         <div class="flex flex-wrap justify-center gap-4 mb-16">
-            <a href="https://github.com/your-repo" class="flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-xl hover:bg-slate-800 transition shadow-xl scale-100 hover:scale-105 active:scale-95">
+            <a href="https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents" class="flex items-center gap-2 bg-slate-900 text-white px-6 py-3 rounded-xl hover:bg-slate-800 transition shadow-xl scale-100 hover:scale-105 active:scale-95">
                 <i class="fa-brands fa-github text-lg"></i>
                 <span class="font-semibold">Curated Paper List</span>
             </a>
@@ -81,7 +105,6 @@
             </a>
         </div>
     </header>
-
     <section id="abstract" class="max-w-4xl mx-auto px-6 py-16">
         <div class="glass-card p-8 md:p-12 rounded-3xl relative">
             <div class="absolute -top-4 left-8 bg-purple-600 text-white text-xs font-bold px-4 py-1.5 rounded-lg shadow-lg">ABSTRACT</div>
@@ -90,7 +113,41 @@
             </p>
         </div>
     </section>
+    <section id="comparison" class="max-w-6xl w-full mx-auto mb-20 px-6">
+        <div class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-6">Definition & Overview</div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            <div class="glass-card p-6 rounded-xl flex flex-col items-center justify-center opacity-80 hover:opacity-100 transition">
+                <h3 class="font-bold text-slate-600 mb-4 text-sm">Static / Human-in-the-loop Agents</h3>
+                <div class="w-full h-48 overflow-hidden rounded bg-slate-50 flex items-center justify-center cursor-zoom-in group" onclick="openModal('fig/agent_component.png')">
+                    <img src="fig/agent_component.png" alt="Traditional Agents Diagram" class="max-h-full object-contain group-hover:scale-105 transition duration-300">
+                </div>
+                <p class="mt-4 text-xs text-slate-500 italic">Dependent on external feedback or static datasets.</p>
+            </div>
 
+            <div class="glass-card p-6 rounded-xl border-2 border-purple-100 shadow-xl bg-white relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-20 h-20 bg-green-100 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                <h3 class="font-bold text-green-700 mb-4 flex items-center justify-center gap-2 text-sm">
+                    <i class="fa-solid fa-arrows-spin"></i> Self-Improvement Loop (Our Focus)
+                </h3>
+                <div class="w-full h-48 overflow-hidden rounded bg-gradient-to-br from-green-50 to-blue-50 flex items-center justify-center cursor-zoom-in group" onclick="openModal('fig/mainfig.png')">
+                    <img src="fig/mainfig.png" alt="Self-Improvement Loop Diagram" class="max-h-full object-contain group-hover:scale-105 transition duration-300">
+                </div>
+                <div class="mt-4 flex justify-between text-[10px] text-slate-600 font-medium px-4">
+                    <span class="flex items-center gap-1"><i class="fa-solid fa-brain text-purple-500"></i> Intrinsic Motivation</span>
+                    <span class="flex items-center gap-1"><i class="fa-solid fa-database text-blue-500"></i> Self-Generated Data</span>
+                </div>
+            </div>
+        </div>
+        <p class="text-[14px] text-slate-400 mt-4 text-center italic">Comparison of traditional agentic workflows vs. self-improving paradigms analyzed in this survey.</p>
+        <p class="text-[10px] text-slate-400 mt-4 text-center italic">Tip: Click on images to view in full size.</p>
+
+        <div id="imageModal" class="fixed inset-0 z-[100] hidden bg-black/90 flex items-center justify-center p-4 cursor-zoom-out" onclick="closeModal()">
+            <img id="modalImg" src="" class="max-w-full max-h-full rounded-lg shadow-2xl transition-transform duration-300">
+            <div class="absolute top-5 right-5 text-white text-3xl cursor-pointer">×</div>
+        </div>
+    </section>
     <section id="taxonomy" class="max-w-6xl w-full mx-auto py-20 px-6">
         <div class="text-center mb-16">
             <h2 class="text-3xl font-bold mb-4">Taxonomy & Framework</h2>
@@ -98,6 +155,7 @@
         </div>
         
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+            
             <div class="glass-card p-8 rounded-3xl border-t-4 border-t-blue-500">
                 <div class="flex items-center gap-3 mb-6">
                     <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
@@ -105,26 +163,26 @@
                     </div>
                     <div>
                         <h3 class="font-bold text-xl text-slate-800">Foundation Model Improvement</h3>
-                        <p class="text-xs text-slate-400 uppercase tracking-widest font-bold">Category §4</p>
+                        <p class="text-xs text-slate-400 uppercase tracking-widest font-bold">Category §1</p>
                     </div>
                 </div>
                 <ul class="space-y-4">
                     <li class="flex items-start gap-3 p-3 rounded-xl hover:bg-blue-50 transition">
-                        <span class="section-tag">4.1</span>
+                        <span class="section-tag">1.1</span>
                         <div>
                             <p class="font-semibold text-sm">Self-Generated Data</p>
                             <p class="text-xs text-slate-500">Distillation from synthetic trajectories & MoAA alignment.</p>
                         </div>
                     </li>
                     <li class="flex items-start gap-3 p-3 rounded-xl hover:bg-blue-50 transition">
-                        <span class="section-tag">4.2</span>
+                        <span class="section-tag">1.2</span>
                         <div>
                             <p class="font-semibold text-sm">Self-Generated Supervision</p>
                             <p class="text-xs text-slate-500">Constitutional AI, SER, and self-verification loops.</p>
                         </div>
                     </li>
                     <li class="flex items-start gap-3 p-3 rounded-xl hover:bg-blue-50 transition">
-                        <span class="section-tag">4.3</span>
+                        <span class="section-tag">1.3</span>
                         <div>
                             <p class="font-semibold text-sm">Self-Generated Experience</p>
                             <p class="text-xs text-slate-500">WebRL & RAGEN: Scaling via world models and environment interaction.</p>
@@ -140,26 +198,33 @@
                     </div>
                     <div>
                         <h3 class="font-bold text-xl text-slate-800">Scaffolding Improvement</h3>
-                        <p class="text-xs text-slate-400 uppercase tracking-widest font-bold">Category §5</p>
+                        <p class="text-xs text-slate-400 uppercase tracking-widest font-bold">Category §2</p>
                     </div>
                 </div>
                 <ul class="space-y-4">
                     <li class="flex items-start gap-3 p-3 rounded-xl hover:bg-purple-50 transition">
-                        <span class="section-tag">5.1</span>
+                        <span class="section-tag">2.1</span>
                         <div>
                             <p class="font-semibold text-sm">Prompt Optimization</p>
                             <p class="text-xs text-slate-500">Iterative refinement (Self-Refine) and evolutionary APE.</p>
                         </div>
                     </li>
                     <li class="flex items-start gap-3 p-3 rounded-xl hover:bg-purple-50 transition">
-                        <span class="section-tag">5.2</span>
+                        <span class="section-tag">2.2</span>
                         <div>
-                            <p class="font-semibold text-sm">Memory & Tool Evolution</p>
+                            <p class="font-semibold text-sm">Memory Evolution</p>
                             <p class="text-xs text-slate-500">Dynamic skill discovery via SkillWeaver and Mem0 memory.</p>
                         </div>
                     </li>
                     <li class="flex items-start gap-3 p-3 rounded-xl hover:bg-purple-50 transition">
-                        <span class="section-tag">5.4</span>
+                        <span class="section-tag">2.3</span>
+                        <div>
+                            <p class="font-semibold text-sm">Tool Governance</p>
+                            <p class="text-xs text-slate-500">Dynamic skill discovery via SkillWeaver and Mem0 memory.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3 p-3 rounded-xl hover:bg-purple-50 transition">
+                        <span class="section-tag">2.4</span>
                         <div>
                             <p class="font-semibold text-sm">Full Scaffolding (Recursive)</p>
                             <p class="text-xs text-slate-500">Gödel Agents: Enabling meta-level self-modification.</p>
@@ -170,6 +235,325 @@
         </div>
     </section>
 
+    <section id="methods" class="max-w-6xl w-full mx-auto py-20 px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-4">Detailed Methodologies</h2>
+            <div class="h-1 w-20 bg-purple-600 mx-auto rounded-full"></div>
+            <p class="text-sm text-slate-500 mt-4">Click to expand each section for detailed explanations</p>
+        </div>
+
+    <div class="space-y-4">
+            <!-- Accordion Item 1: Foundation Model Improvement -->
+            <div class="rounded-2xl overflow-hidden shadow-lg">
+                <div class="accordion-header px-6 py-4 flex justify-between items-center text-white" onclick="toggleAccordion('acc1')">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-brain text-2xl"></i>
+                        <h3 class="font-bold text-lg">Foundation Model Improvement</h3>
+                    </div>
+                    <i id="icon-acc1" class="fas fa-plus accordion-icon text-xl"></i>
+                </div>
+                <div id="acc1" class="accordion-content bg-white border-l-4 border-blue-500">
+                    <div class="p-6 md:p-8">
+                        <p class="text-slate-700 leading-relaxed mb-6">
+                            Foundation Model Improvement directly targets the agent's core parameters <span class="font-mono bg-blue-50 px-2 py-0.5 rounded">θ<sub>FM</sub></span>, updating neural weights to internalize new knowledge, skills, and reasoning patterns. This paradigm enables lasting capability enhancement through gradient-based optimization methods.
+                        </p>
+
+                        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-5 mb-6 border-2 border-blue-200">
+                            <h4 class="font-bold text-blue-900 mb-3 flex items-center gap-2">
+                                <i class="fas fa-code-branch"></i> Update Formalism
+                            </h4>
+                            <div class="bg-white rounded-lg p-4 font-mono text-sm text-slate-700 border border-blue-200">
+                                θ<sub>t+1</sub> = IMPROVE<sub>θ</sub>(θ<sub>t</sub>; S<sub>t</sub>), &nbsp; Σ<sub>t+1</sub> = Σ<sub>t</sub>
+                            </div>
+                            <p class="text-xs text-slate-600 mt-2 italic">The scaffolding remains fixed while model parameters evolve based on learning signal S<sub>t</sub></p>
+                        </div>
+
+                        <div class="mb-6 flex justify-center">
+                            <img src="fig/fm.png"
+                                alt="Foundation Model Improvement Illustration"
+                                class="w-2/3 md:w-1/2 mx-auto rounded-xl shadow-md">
+                        </div>
+
+                        <h4 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
+                            <i class="fas fa-layer-group text-blue-600"></i> Three Learning Signal Categories
+                        </h4>
+
+                        <div class="space-y-4">
+                            <!-- Self-Generated Data -->
+                            <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-5 border-l-4 border-purple-500">
+                                <div class="flex items-start gap-3 mb-3">
+                                    <div class="w-10 h-10 rounded-full bg-purple-500 text-white flex items-center justify-center flex-shrink-0 font-bold">1</div>
+                                    <div>
+                                        <h5 class="font-bold text-purple-900 text-base">Self-Generated Data</h5>
+                                        <p class="text-xs text-purple-700 mt-1">S<sub>t</sub> = D<sub>t</sub>: Agent produces training instances</p>
+                                    </div>
+                                </div>
+                                <ul class="space-y-2 text-sm text-slate-700 ml-13">
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check-circle text-purple-500 mt-1"></i>
+                                        <span><strong>Methods:</strong> SELF-INSTRUCT, TaskCraft, MOAA alignment, curriculum learning</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check-circle text-purple-500 mt-1"></i>
+                                        <span><strong>Data Formats:</strong> Instruction-response pairs, reasoning traces, tool-use sequences, multimodal data</span>
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <i class="fas fa-check-circle text-purple-500 mt-1"></i>
+                                        <span><strong>Applications:</strong> Instruction-following, mathematics, code generation, creative writing</span>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <!-- Self-Generated Supervision -->
+                            <div class="bg-gradient-to-r from-green-50 to-teal-50 rounded-xl p-5 border-l-4 border-green-500">
+                                <div class="flex items-start gap-3 mb-3">
+                                    <div class="w-10 h-10 rounded-full bg-green-500 text-white flex items-center justify-center flex-shrink-0 font-bold">2</div>
+                                    <div>
+                                        <h5 class="font-bold text-green-900 text-base">Self-Generated Supervision</h5>
+                                        <p class="text-xs text-green-700 mt-1">S<sub>t</sub> = r<sub>t</sub>: Agent generates feedback signals</p>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 ml-13">
+                                    <div class="bg-white rounded-lg p-3 border border-green-200">
+                                        <p class="font-semibold text-xs text-green-800 mb-1">Outcome Verification</p>
+                                        <p class="text-xs text-slate-600">V-STaR: Unit tests as rewards</p>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-3 border border-green-200">
+                                        <p class="font-semibold text-xs text-green-800 mb-1">Self-Consistency</p>
+                                        <p class="text-xs text-slate-600">TTRL: Majority voting signals</p>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-3 border border-green-200">
+                                        <p class="font-semibold text-xs text-green-800 mb-1">Self-Refinement</p>
+                                        <p class="text-xs text-slate-600">Constitutional AI: RLAIF</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Self-Generated Experience -->
+                            <div class="bg-gradient-to-r from-orange-50 to-amber-50 rounded-xl p-5 border-l-4 border-orange-500">
+                                <div class="flex items-start gap-3 mb-3">
+                                    <div class="w-10 h-10 rounded-full bg-orange-500 text-white flex items-center justify-center flex-shrink-0 font-bold">3</div>
+                                    <div>
+                                        <h5 class="font-bold text-orange-900 text-base">Self-Generated Experience</h5>
+                                        <p class="text-xs text-orange-700 mt-1">S<sub>t</sub> = τ<sub>t</sub>: Learning from environmental interaction</p>
+                                    </div>
+                                </div>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 ml-13">
+                                    <div class="bg-white rounded-lg p-3 border border-orange-200">
+                                        <p class="font-semibold text-xs text-orange-800 mb-2 flex items-center gap-1">
+                                            <i class="fas fa-globe"></i> Environment-Interaction
+                                        </p>
+                                        <p class="text-xs text-slate-600 mb-1">Direct engagement with real or simulated environments</p>
+                                        <p class="text-xs text-slate-500">WebRL, RoboCat, AGENTGYM</p>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-3 border border-orange-200">
+                                        <p class="font-semibold text-xs text-orange-800 mb-2 flex items-center gap-1">
+                                            <i class="fas fa-brain"></i> World Models
+                                        </p>
+                                        <p class="text-xs text-slate-600 mb-1">Learned simulators enable fast, safe exploration</p>
+                                        <p class="text-xs text-slate-500">WebEvolver, VirtualHome, WMA</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                            <p class="text-sm text-blue-900">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                <strong>Key Trade-off:</strong> FM improvement operates on longer time scales and incurs substantial computational cost, but leads to persistent, global changes in the agent's capabilities and generalization behavior.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Accordion Item 2: Scaffolding Improvement -->
+            <div class="rounded-2xl overflow-hidden shadow-lg">
+                <div class="accordion-header px-6 py-4 flex justify-between items-center text-white" onclick="toggleAccordion('acc2')">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-layer-group text-2xl"></i>
+                        <h3 class="font-bold text-lg">Scaffolding Improvement</h3>
+                    </div>
+                    <i id="icon-acc2" class="fas fa-plus accordion-icon text-xl"></i>
+                </div>
+                <div id="acc2" class="accordion-content bg-white border-l-4 border-purple-500">
+                    <div class="p-6 md:p-8">
+                        <p class="text-slate-700 leading-relaxed mb-6">
+                            Scaffolding Improvement modifies the operational framework <span class="font-mono bg-purple-50 px-2 py-0.5 rounded">Σ<sub>t</sub></span> while keeping foundation model parameters fixed. This "fast loop" enables rapid, reversible capability expansion through optimizing prompts, memory, and tools.
+                        </p>
+
+                        <div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-5 mb-6 border-2 border-purple-200">
+                            <h4 class="font-bold text-purple-900 mb-3 flex items-center gap-2">
+                                <i class="fas fa-cogs"></i> Update Formalism
+                            </h4>
+                            <div class="bg-white rounded-lg p-4 font-mono text-sm text-slate-700 border border-purple-200">
+                                Σ<sub>t+1</sub> = IMPROVE<sub>Σ</sub>(Σ<sub>t</sub>; S<sub>t</sub>), &nbsp; θ<sub>t+1</sub> = θ<sub>t</sub>
+                            </div>
+                            <p class="text-xs text-slate-600 mt-2 italic">Model parameters remain frozen while scaffolding components evolve: Σ<sub>t</sub> := (p<sub>t</sub>, m<sub>t</sub>, T<sub>t</sub>)</p>
+                        </div>
+
+                        <h4 class="font-bold text-slate-800 mb-4 flex items-center gap-2">
+                            <i class="fas fa-cubes text-purple-600"></i> Four Improvement Levels
+                        </h4>
+
+                        <div class="space-y-4">
+                            <!-- Prompt Optimization -->
+                            <div class="bg-gradient-to-r from-indigo-50 to-blue-50 rounded-xl p-5 border-l-4 border-indigo-500">
+                                <div class="flex items-start gap-3 mb-3">
+                                    <div class="w-10 h-10 rounded-full bg-indigo-500 text-white flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-keyboard text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-indigo-900 text-base">Prompt Optimization</h5>
+                                        <p class="text-xs text-indigo-700 mt-1">p<sub>t+1</sub> = IMPROVE<sub>p</sub>(p<sub>t</sub>; S<sub>t</sub>)</p>
+                                    </div>
+                                </div>
+
+                                <img src="fig/prompt.png"
+                                    alt="Prompt Optimization Illustration"
+                                    class="w-full md:w-1/3 mx-auto rounded-lg shadow-sm mb-4">
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 ml-13 text-xs">
+                                    <div class="bg-white rounded-lg p-3 border border-indigo-200">
+                                        <p class="font-semibold text-indigo-800 mb-1">🔍 Black-Box: APE, OPRO</p>
+                                        <p class="text-slate-600">Scalar score optimization</p>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-3 border border-indigo-200">
+                                        <p class="font-semibold text-indigo-800 mb-1">🔄 Iterative: Self-Refine</p>
+                                        <p class="text-slate-600">Qualitative feedback loops</p>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-3 border border-indigo-200">
+                                        <p class="font-semibold text-indigo-800 mb-1">🧬 Evolutionary: EvoPrompt</p>
+                                        <p class="text-slate-600">Population-based search</p>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-3 border border-indigo-200">
+                                        <p class="font-semibold text-indigo-800 mb-1">📐 Gradient: TextGrad</p>
+                                        <p class="text-slate-600">Directional optimization</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Memory -->
+                            <div class="bg-gradient-to-r from-cyan-50 to-sky-50 rounded-xl p-5 border-l-4 border-cyan-500">
+                                <div class="flex items-start gap-3 mb-3">
+                                    <div class="w-10 h-10 rounded-full bg-cyan-500 text-white flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-database text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-cyan-900 text-base">Memory Evolution</h5>
+                                        <p class="text-xs text-cyan-700 mt-1">m<sub>t+1</sub> = IMPROVE<sub>m</sub>(m<sub>t</sub>; S<sub>t</sub>)</p>
+                                    </div>
+                                </div>
+
+                                <img src="fig/mem.png"
+                                    alt="Agent Memory Illustration"
+                                    class="w-full md:w-1/3 mx-auto rounded-lg shadow-sm mb-4">
+
+                                <div class="ml-13 space-y-2">
+                                    <div class="flex items-start gap-2 text-sm">
+                                        <i class="fas fa-cube text-cyan-500 mt-1"></i>
+                                        <div>
+                                            <strong class="text-cyan-900">Memory Objects:</strong> 
+                                            <span class="text-slate-600">Explicit (summaries, facts, entities) & Implicit (latent embeddings)</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-2 text-sm">
+                                        <i class="fas fa-project-diagram text-cyan-500 mt-1"></i>
+                                        <div>
+                                            <strong class="text-cyan-900">Memory Structures:</strong> 
+                                            <span class="text-slate-600">Flat, Hierarchical, Graph-based, Vector retrieval (RAG)</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start gap-2 text-sm">
+                                        <i class="fas fa-sync-alt text-cyan-500 mt-1"></i>
+                                        <div>
+                                            <strong class="text-cyan-900">CRUD Operations:</strong> 
+                                            <span class="text-slate-600">Signal-driven Create, Read, Update, Delete with adaptive policies</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-xs text-slate-500 italic mt-2">Examples: AWM, MemoryBank, Mem0, G-Memory, ACE</p>
+                                </div>
+                            </div>
+
+                            <!-- Tool -->
+                            <div class="bg-gradient-to-r from-emerald-50 to-green-50 rounded-xl p-5 border-l-4 border-emerald-500">
+                                <div class="flex items-start gap-3 mb-3">
+                                    <div class="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-wrench text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-emerald-900 text-base">Tool Governance</h5>
+                                        <p class="text-xs text-emerald-700 mt-1">T<sub>t+1</sub> = IMPROVE<sub>T</sub>(T<sub>t</sub>; S<sub>t</sub>)</p>
+                                    </div>
+                                </div>
+
+                                <img src="fig/tool.png"
+                                    alt="Tool Governance Illustration"
+                                    class="w-full md:w-1/6 mx-auto rounded-lg shadow-sm mb-4">
+
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-3 ml-13 text-xs">
+                                    <div class="bg-white rounded-lg p-3 border border-emerald-200">
+                                        <p class="font-semibold text-emerald-800 mb-2 flex items-center gap-1">
+                                            <i class="fas fa-route"></i> Dynamic Routing
+                                        </p>
+                                        <p class="text-slate-600 mb-1">Efficient allocation & orchestration</p>
+                                        <p class="text-slate-500">VOYAGER, ToolNet, SPORT</p>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-3 border border-emerald-200">
+                                        <p class="font-semibold text-emerald-800 mb-2 flex items-center gap-1">
+                                            <i class="fas fa-tools"></i> Iterative Refinement
+                                        </p>
+                                        <p class="text-slate-600 mb-1">Debug & harden execution</p>
+                                        <p class="text-slate-500">SkillWeaver, STELLA, DRAFT</p>
+                                    </div>
+                                    <div class="bg-white rounded-lg p-3 border border-emerald-200">
+                                        <p class="font-semibold text-emerald-800 mb-2 flex items-center gap-1">
+                                            <i class="fas fa-magic"></i> Autonomous Creation
+                                        </p>
+                                        <p class="text-slate-600 mb-1">On-demand tool synthesis</p>
+                                        <p class="text-slate-500">ALITA, TOOLMAKER, FRIDAY</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Full Scaffolding -->
+                            <div class="bg-gradient-to-r from-rose-50 to-red-50 rounded-xl p-5 border-l-4 border-rose-500">
+                                <div class="flex items-start gap-3 mb-3">
+                                    <div class="w-10 h-10 rounded-full bg-rose-500 text-white flex items-center justify-center flex-shrink-0">
+                                        <i class="fas fa-code text-sm"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-rose-900 text-base">Full Scaffolding</h5>
+                                        <p class="text-xs text-rose-700 mt-1">Σ<sub>t+1</sub> = I<sub>Σ<sub>t</sub></sub>(Σ<sub>t</sub>; S<sub>t</sub>) - Self-referential updates</p>
+                                    </div>
+                                </div>
+                                <div class="ml-13 bg-white rounded-lg p-4 border-2 border-rose-200">
+                                    <p class="text-sm text-slate-700 mb-3">
+                                        <strong class="text-rose-900">The most ambitious paradigm:</strong> Agents modify their own defining implementation and operational code, enabling recursive self-improvement.
+                                    </p>
+                                    <div class="flex flex-wrap gap-2">
+                                        <span class="px-2 py-1 bg-rose-100 text-rose-800 rounded text-xs font-medium">Gödel Agent</span>
+                                        <span class="px-2 py-1 bg-rose-100 text-rose-800 rounded text-xs font-medium">Darwin Gödel Machine</span>
+                                        <span class="px-2 py-1 bg-rose-100 text-rose-800 rounded text-xs font-medium">AlphaEvolve</span>
+                                        <span class="px-2 py-1 bg-rose-100 text-rose-800 rounded text-xs font-medium">ADAS</span>
+                                        <span class="px-2 py-1 bg-rose-100 text-rose-800 rounded text-xs font-medium">Live-SWE-Agent</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-6 bg-purple-50 border-l-4 border-purple-500 p-4 rounded">
+                            <p class="text-sm text-purple-900">
+                                <i class="fas fa-bolt mr-2"></i>
+                                <strong>Key Advantage:</strong> Scaffolding improvement is computationally efficient, highly adaptive, and reversible—representing the "fast loop" that complements parameter-based "slow loop" learning.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section id="citation" class="max-w-4xl mx-auto px-6 py-20 text-center">
         <h2 class="text-2xl font-bold mb-8 flex items-center justify-center gap-2">
             <i class="fa-solid fa-quote-left text-purple-400"></i> Cite our Work
@@ -187,7 +571,6 @@
 }</pre>
         </div>
     </section>
-
     <section class="max-w-4xl mx-auto pb-24 px-6 text-center border-t border-slate-200 pt-16">
         <div class="flex flex-wrap justify-center gap-x-12 gap-y-6 mb-8">
             <div class="flex flex-col">
@@ -207,17 +590,55 @@
             * Equal contribution. Contact: contact@lab.edu
         </p>
     </section>
-
     <footer class="py-12 bg-slate-900 text-slate-500 text-center text-sm border-t border-slate-800">
         <p>&copy; 2026 SI-Agents Survey Team. Built with Tailwind CSS.</p>
     </footer>
-
     <script>
         function copyBib() {
             const bibText = document.getElementById('bibtex').innerText;
             navigator.clipboard.writeText(bibText).then(() => {
                 alert('BibTeX copied to clipboard!');
             });
+        }
+
+        function openModal(src) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImg');
+            if (modal && modalImg) {
+                modal.classList.remove('hidden');
+                modalImg.src = src;
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto'; 
+            }
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === "Escape") closeModal();
+        });
+
+        // Accordion functionality
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const icon = document.getElementById('icon-' + id);
+            
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                icon.classList.remove('rotate');
+                icon.classList.remove('fa-minus');
+                icon.classList.add('fa-plus');
+            } else {
+                content.classList.add('active');
+                icon.classList.add('rotate');
+                icon.classList.remove('fa-plus');
+                icon.classList.add('fa-minus');
+            }
         }
     </script>
 </body>
