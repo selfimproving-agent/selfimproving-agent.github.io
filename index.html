@@ -273,6 +273,45 @@
       max-width:var(--max); margin:0 auto; padding:0 24px 40px;
       color:var(--muted); font:13px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
     }
+
+    .image-zoom-trigger {
+      display:block; width:100%; padding:0; border:0; background:none; cursor:zoom-in;
+      border-radius:12px;
+    }
+    .image-zoom-trigger:focus-visible {
+      outline:2px solid var(--blue); outline-offset:4px;
+    }
+    .figure-caption {
+      margin-top:12px; color:#374151; font-size:14px;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    .zoom-hint {
+      margin-top:5px; color:var(--muted); font-size:12px;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    .epigraph-text {
+      font-size:16px; line-height:1.7; color:#1f2937; font-style:italic;
+    }
+    .epigraph-author {
+      margin-top:10px; text-align:right; color:var(--muted); font-size:13px;
+    }
+    .image-modal {
+      position:fixed; inset:0; z-index:120; display:none; align-items:center; justify-content:center;
+      background:rgba(15,23,42,.82); padding:24px;
+    }
+    .image-modal.open { display:flex; }
+    .image-modal-inner {
+      position:relative; max-width:min(1100px, 96vw); max-height:92vh;
+    }
+    .image-modal img {
+      display:block; max-width:100%; max-height:92vh; width:auto; height:auto;
+      border-radius:14px; background:#fff; box-shadow:0 16px 40px rgba(0,0,0,.3);
+    }
+    .image-modal-close {
+      position:absolute; top:-14px; right:-14px; width:38px; height:38px; border:0; border-radius:999px;
+      background:#fff; color:#111827; font-size:28px; line-height:1; cursor:pointer; box-shadow:var(--shadow);
+    }
+
     @media (max-width: 980px) {
       .page { grid-template-columns:1fr; }
       .sidebar { position:static; }
@@ -315,7 +354,7 @@
 
       <div class="side-card toc">
         <div class="side-title">Contents</div>
-        <a href="#abstract">Abstract</a><a href="#overview">Overview</a><a href="#recursive-note">A small recursive thought experiment</a><a href="#taxonomy">Taxonomy</a><a href="#quickstart">Quick start: representative papers</a><a href="#library">Curated paper library</a>
+        <a href="#abstract">Abstract</a><a href="#overview">Overview</a><a href="#recursive-note">Epigraph</a><a href="#taxonomy">Taxonomy</a><a href="#quickstart">Quick start: representative papers</a><a href="#library">Curated paper library</a>
         <a class="sub" href="#sgd">1.1 Self-generated data</a><a class="sub" href="#supervision">1.2 Self-generated supervision</a><a class="sub" href="#experience-env">1.3.1 Environment-interactive</a><a class="sub" href="#experience-world">1.3.2 World models</a><a class="sub" href="#prompt-scalar">2.1.1 Scalar-feedback optimization</a><a class="sub" href="#prompt-qual">2.1.2 Qualitative-feedback refinement</a><a class="sub" href="#prompt-pop">2.1.3 Population-based evolution</a><a class="sub" href="#prompt-grad">2.1.4 Textual gradient optimization</a><a class="sub" href="#memory-object">2.2.1 Memory object</a><a class="sub" href="#memory-structure">2.2.2 Memory structure</a><a class="sub" href="#memory-processing">2.2.3 Memory processing</a><a class="sub" href="#tool-routing">2.3.1 Dynamic tool routing</a><a class="sub" href="#tool-refine">2.3.2 Iterative tool refinement</a><a class="sub" href="#tool-create">2.3.3 Autonomous tool creation</a><a class="sub" href="#full-scaffolding">2.4 Full scaffolding</a>
         <a href="#reading-guide">How to read this survey</a><a href="#citation">Citation</a><a href="#authors">Authors</a>
       </div>
@@ -329,9 +368,10 @@
       </div>
 
       <div class="side-card" id="recursive-note">
-        <div class="side-title">A small recursive thought experiment</div>
-        <div style="font-size:14px;color:#374151;line-height:1.7">
-          If an agent finished reading this survey and immediately decided to improve itself, its first question would probably not be philosophical. It would be surprisingly administrative: what exactly is allowed to change—the model weights, the prompts, the memory, the tools, or the whole scaffold? Much of the field can be read as different answers to that one question. In that sense, self-improving agents are a bit like very ambitious graduate students: they do not just want better results; they want a better process for producing them.
+        <div class="side-title">Epigraph</div>
+        <div class="epigraph">
+          <div class="epigraph-text">“The first ultraintelligent machine is the last invention that man need ever make.”</div>
+          <div class="epigraph-author">— I. J. Good (1966)</div>
         </div>
       </div>
 
@@ -376,7 +416,11 @@
         <h2>Overview</h2>
         <div class="overview-grid">
           <div class="figure-frame">
-            <img src="static/images/mainfig.png" onerror="this.onerror=null;this.src='assets/fig.png';" alt="Overview of self-improvement mechanisms in foundation model-based agentic systems" class="overview-image">
+            <button class="image-zoom-trigger" type="button" aria-label="Open overview figure in full size" onclick="openImageModal()">
+              <img src="static/images/mainfig.png" onerror="this.onerror=null;this.src='assets/fig.png';" alt="Overview of self-improvement mechanisms in foundation model-based agentic systems" class="overview-image">
+            </button>
+            <div class="figure-caption">Overview of self-improvement mechanisms in foundation model-based agentic systems.</div>
+            <div class="zoom-hint">Click the figure to enlarge.</div>
           </div>
           <div class="overview-note">
             <p><strong>Core distinction.</strong> Self-improvement can be framed by asking <em>what is being updated</em>.</p>
@@ -2277,11 +2321,45 @@
     </main>
   </div>
 
+  <div id="imageModal" class="image-modal" aria-hidden="true" onclick="closeImageModal(event)">
+    <div class="image-modal-inner">
+      <button class="image-modal-close" type="button" aria-label="Close enlarged figure" onclick="closeImageModal(event)">&times;</button>
+      <img id="modalImage" src="static/images/mainfig.png" onerror="this.onerror=null;this.src='assets/fig.png';" alt="Enlarged overview of self-improvement mechanisms in foundation model-based agentic systems">
+    </div>
+  </div>
+
   <footer>
     © 2026 SI-Agents Survey Team.
   </footer>
 
   <script>
+
+    function openImageModal() {
+      const modal = document.getElementById('imageModal');
+      if (!modal) return;
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeImageModal(event) {
+      if (event && event.type === 'click') {
+        const inner = document.querySelector('.image-modal-inner');
+        if (event.currentTarget && event.currentTarget.classList.contains('image-modal') && inner && inner.contains(event.target)) {
+          return;
+        }
+      }
+      const modal = document.getElementById('imageModal');
+      if (!modal) return;
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') closeImageModal();
+    });
+
     (function() {
       const search = document.getElementById('paperSearch');
       const chips = Array.from(document.querySelectorAll('.chip'));
