@@ -129,6 +129,9 @@
     .figure-frame {
       border:1px solid var(--line); border-radius:16px; padding:18px; background:#fcfcfd;
     }
+    .overview-image {
+      display:block; width:100%; height:auto; border-radius:12px;
+    }
     .overview-note {
       border:1px solid var(--line); border-radius:16px; padding:18px; background:var(--soft);
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
@@ -252,6 +255,16 @@
     }
     .author strong { display:block; margin-bottom:4px; }
     .author span { color:var(--muted); font-size:14px; }
+    .contact-block {
+      margin-top:18px; padding:16px 18px; border:1px solid var(--line); border-radius:14px;
+      background:var(--soft); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    .contact-block strong { display:block; margin-bottom:6px; color:#111827; }
+    .contact-block .small { font-size:13px; color:var(--muted); margin-bottom:8px; }
+    .contact-block .mono {
+      font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+      font-size:12.5px; line-height:1.75; color:#374151; word-break:break-word;
+    }
     .resource-links {
       display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
@@ -302,7 +315,7 @@
 
       <div class="side-card toc">
         <div class="side-title">Contents</div>
-        <a href="#abstract">Abstract</a><a href="#overview">Overview</a><a href="#taxonomy">Taxonomy</a><a href="#quickstart">Representative papers</a><a href="#library">Curated paper library</a>
+        <a href="#abstract">Abstract</a><a href="#overview">Overview</a><a href="#recursive-note">A small recursive thought experiment</a><a href="#taxonomy">Taxonomy</a><a href="#quickstart">Quick start: representative papers</a><a href="#library">Curated paper library</a>
         <a class="sub" href="#sgd">1.1 Self-generated data</a><a class="sub" href="#supervision">1.2 Self-generated supervision</a><a class="sub" href="#experience-env">1.3.1 Environment-interactive</a><a class="sub" href="#experience-world">1.3.2 World models</a><a class="sub" href="#prompt-scalar">2.1.1 Scalar-feedback optimization</a><a class="sub" href="#prompt-qual">2.1.2 Qualitative-feedback refinement</a><a class="sub" href="#prompt-pop">2.1.3 Population-based evolution</a><a class="sub" href="#prompt-grad">2.1.4 Textual gradient optimization</a><a class="sub" href="#memory-object">2.2.1 Memory object</a><a class="sub" href="#memory-structure">2.2.2 Memory structure</a><a class="sub" href="#memory-processing">2.2.3 Memory processing</a><a class="sub" href="#tool-routing">2.3.1 Dynamic tool routing</a><a class="sub" href="#tool-refine">2.3.2 Iterative tool refinement</a><a class="sub" href="#tool-create">2.3.3 Autonomous tool creation</a><a class="sub" href="#full-scaffolding">2.4 Full scaffolding</a>
         <a href="#reading-guide">How to read this survey</a><a href="#citation">Citation</a><a href="#authors">Authors</a>
       </div>
@@ -315,6 +328,12 @@
         </div>
       </div>
 
+      <div class="side-card" id="recursive-note">
+        <div class="side-title">A small recursive thought experiment</div>
+        <div style="font-size:14px;color:#374151;line-height:1.7">
+          If an agent finished reading this survey and immediately decided to improve itself, its first question would probably not be philosophical. It would be surprisingly administrative: what exactly is allowed to change—the model weights, the prompts, the memory, the tools, or the whole scaffold? Much of the field can be read as different answers to that one question. In that sense, self-improving agents are a bit like very ambitious graduate students: they do not just want better results; they want a better process for producing them.
+        </div>
+      </div>
 
     </aside>
 
@@ -357,60 +376,7 @@
         <h2>Overview</h2>
         <div class="overview-grid">
           <div class="figure-frame">
-            <svg viewBox="0 0 860 420" width="100%" height="100%" role="img" aria-label="Overview of self-improvement in FM-based agents">
-              <defs>
-                <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto-start-reverse">
-                  <path d="M0,0 L10,5 L0,10 z" fill="#6b7280"></path>
-                </marker>
-              </defs>
-              <rect x="40" y="40" width="780" height="340" rx="24" fill="#fbfbfc" stroke="#e5e7eb"/>
-              <text x="430" y="78" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="26" font-weight="700" fill="#111827">
-                Self-Improving FM-Based Agent
-              </text>
-
-              <rect x="95" y="130" width="280" height="170" rx="18" fill="#dbeafe" stroke="#93c5fd"/>
-              <text x="235" y="162" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="22" font-weight="700" fill="#1e3a8a">
-                Foundation Model
-              </text>
-              <text x="235" y="197" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="15" fill="#1e3a8a">
-                parameters θ
-              </text>
-              <text x="235" y="228" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" fill="#1e3a8a">
-                self-generated data
-              </text>
-              <text x="235" y="252" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" fill="#1e3a8a">
-                self-generated supervision
-              </text>
-              <text x="235" y="276" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" fill="#1e3a8a">
-                self-generated experience
-              </text>
-
-              <rect x="485" y="130" width="280" height="170" rx="18" fill="#dff3ea" stroke="#99f6e4"/>
-              <text x="625" y="162" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="22" font-weight="700" fill="#115e59">
-                Scaffolding Σ
-              </text>
-              <text x="625" y="197" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="15" fill="#115e59">
-                prompts · memory · tools · code
-              </text>
-              <text x="625" y="228" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" fill="#115e59">
-                prompt optimization
-              </text>
-              <text x="625" y="252" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" fill="#115e59">
-                memory evolution
-              </text>
-              <text x="625" y="276" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="14" fill="#115e59">
-                tool governance / full scaffolding
-              </text>
-
-              <path d="M375 215 C425 165, 445 165, 485 215" fill="none" stroke="#6b7280" stroke-width="3" marker-end="url(#arrow)"/>
-              <path d="M485 245 C445 295, 425 295, 375 245" fill="none" stroke="#6b7280" stroke-width="3" marker-end="url(#arrow)"/>
-              <text x="430" y="196" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="13" fill="#4b5563">
-                slow loop
-              </text>
-              <text x="430" y="282" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="13" fill="#4b5563">
-                fast loop
-              </text>
-            </svg>
+            <img src="static/images/mainfig.png" onerror="this.onerror=null;this.src='assets/fig.png';" alt="Overview of self-improvement mechanisms in foundation model-based agentic systems" class="overview-image">
           </div>
           <div class="overview-note">
             <p><strong>Core distinction.</strong> Self-improvement can be framed by asking <em>what is being updated</em>.</p>
@@ -456,7 +422,7 @@
       </section>
 
       <section id="quickstart">
-        <h2>Representative papers</h2>
+        <h2>Quick start: representative papers</h2>
         <p>
           These are not the only important papers in the survey. They are included here as a first reading path for readers
           who want to understand the landscape quickly before diving into the full library.
@@ -2285,10 +2251,27 @@
       <section id="authors">
         <h2>Authors</h2>
         <div class="authors">
-          <div class="author"><strong>Zhe Ren</strong><span>Jilin University</span></div><div class="author"><strong>Yimeng Chen</strong><span>KAUST</span></div><div class="author"><strong>Dandan Guo</strong><span>Jilin University · KAUST</span></div><div class="author"><strong>Guowei Rong</strong><span>Jilin University</span></div><div class="author"><strong>Tonghui Li</strong><span>Jilin University</span></div><div class="author"><strong>R.B. Xiong</strong><span>Independent Researcher</span></div><div class="author"><strong>Qingfeng Lan</strong><span>University of Alberta</span></div><div class="author"><strong>Nanbo Li</strong><span>KAUST</span></div><div class="author"><strong>Yibo Yang</strong><span>KAUST</span></div><div class="author"><strong>Mingchen Zhuge</strong><span>KAUST</span></div><div class="author"><strong>Jürgen Schmidhuber</strong><span>KAUST · IDSIA</span></div>
+          <div class="author"><strong>Zhe Ren</strong><span>School of Artificial Intelligence, Jilin University</span></div>
+          <div class="author"><strong>Yimeng Chen<sup>*</sup></strong><span>King Abdullah University of Science and Technology (KAUST)</span></div>
+          <div class="author"><strong>Dandan Guo<sup>*</sup></strong><span>School of Artificial Intelligence, Jilin University · KAUST</span></div>
+          <div class="author"><strong>Guowei Rong</strong><span>School of Artificial Intelligence, Jilin University</span></div>
+          <div class="author"><strong>Tonghui Li</strong><span>School of Artificial Intelligence, Jilin University</span></div>
+          <div class="author"><strong>R.B. Xiong</strong><span>Independent Researcher</span></div>
+          <div class="author"><strong>Qingfeng Lan</strong><span>University of Alberta</span></div>
+          <div class="author"><strong>Wenyi Wang</strong><span>King Abdullah University of Science and Technology (KAUST)</span></div>
+          <div class="author"><strong>Nanbo Li</strong><span>King Abdullah University of Science and Technology (KAUST)</span></div>
+          <div class="author"><strong>Yibo Yang</strong><span>King Abdullah University of Science and Technology (KAUST)</span></div>
+          <div class="author"><strong>Mingchen Zhuge</strong><span>King Abdullah University of Science and Technology (KAUST)</span></div>
+          <div class="author"><strong>Jürgen Schmidhuber</strong><span>King Abdullah University of Science and Technology (KAUST) · The Swiss AI Lab IDSIA/USI/SUPSI</span></div>
         </div>
-        <div class="note" style="margin-top:18px;">
-          Affiliations: <sup>1</sup> Jilin University · <sup>2</sup> King Abdullah University of Science and Technology (KAUST) · <sup>3</sup> Independent Researcher · <sup>4</sup> University of Alberta · <sup>5</sup> The Swiss AI Lab IDSIA/USI/SUPSI
+        <div class="contact-block">
+          <strong>Contact</strong>
+          <div class="small">* Corresponding authors</div>
+          <div class="mono">
+            guodandan@jlu.edu.cn, {renzhe25, ronggw25, lith}@mails.jlu.edu.cn,<br>
+            {yimeng.chen, wenyi.wang, nanbo.li, yibo.yang, mingchen.zhuge, juergen.schmidhuber}@kaust.edu.sa,<br>
+            qlan3@ualberta.ca, rbxiong1@outlook.com
+          </div>
         </div>
       </section>
     </main>
