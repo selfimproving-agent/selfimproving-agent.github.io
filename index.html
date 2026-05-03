@@ -361,7 +361,7 @@
       <div class="side-card toc">
         <div class="side-title">Contents</div>
         <a href="#abstract">Abstract</a><a href="#overview">Overview</a><a href="#recursive-note">Epigraph</a><a href="#taxonomy">Taxonomy</a><a href="#quickstart">Quick start: representative papers</a><a href="#library">Curated paper library</a>
-        <a class="sub" href="#sgd">1.1 Self-generated data</a><a class="sub" href="#supervision">1.2 Self-generated supervision</a><a class="sub" href="#experience-env">1.3.1 Environment-interactive</a><a class="sub" href="#experience-world">1.3.2 World models</a><a class="sub" href="#prompt-scalar">2.1.1 Scalar-feedback optimization</a><a class="sub" href="#prompt-qualitative">2.1.2 Qualitative-feedback refinement</a><a class="sub" href="#prompt-evolution">2.1.3 Population-based evolution</a><a class="sub" href="#prompt-textgrad">2.1.4 Textual gradient optimization</a><a class="sub" href="#memory-object">2.2.1 Memory object</a><a class="sub" href="#memory-structure">2.2.2 Memory structure</a><a class="sub" href="#memory-processing">2.2.3 Memory processing</a><a class="sub" href="#tool-routing">2.3.1 Dynamic tool routing</a><a class="sub" href="#tool-refine">2.3.2 Iterative tool refinement</a><a class="sub" href="#tool-create">2.3.3 Autonomous tool creation</a><a class="sub" href="#full-scaffolding">2.4 Full scaffolding</a>
+        <a class="sub" href="#sgd">1.1 Intrinsic generative demonstrations</a><a class="sub" href="#evaluative-feedback">1.2 Intrinsic evaluative feedback</a><a class="sub" href="#experience-env">1.3.1 Grounded executable environments</a><a class="sub" href="#experience-world">1.3.2 Generative world models</a><a class="sub" href="#prompt-scalar">2.1.1 Scalar-feedback optimization</a><a class="sub" href="#prompt-qualitative">2.1.2 Qualitative-feedback refinement</a><a class="sub" href="#prompt-evolution">2.1.3 Population-based evolution</a><a class="sub" href="#prompt-textgrad">2.1.4 Textual gradient optimization</a><a class="sub" href="#memory-object">2.2.1 Memory object</a><a class="sub" href="#memory-structure">2.2.2 Memory structure</a><a class="sub" href="#memory-processing">2.2.3 Memory processing</a><a class="sub" href="#tool-routing">2.3.1 Dynamic tool routing</a><a class="sub" href="#tool-refine">2.3.2 Iterative tool refinement</a><a class="sub" href="#tool-create">2.3.3 Autonomous tool creation</a><a class="sub" href="#full-scaffolding">2.4 Full scaffolding</a>
         <a href="#reading-guide">How to read this survey</a><a href="#citation">Citation</a><a href="#authors">Authors</a>
       </div>
 
@@ -389,7 +389,7 @@
         <h1>Self-Improvement in Foundation Model-based Agentic Systems</h1>
         <p class="subtitle">
           A survey of how foundation model-based agents improve themselves through model updates,
-          self-generated supervision and experience, prompt evolution, memory, tool use, and recursive scaffolding.
+          intrinsic demonstrations, intrinsic evaluative feedback, extrinsic experience, prompt evolution, memory, tool use, and recursive scaffolding.
         </p>
         <div class="actions">
           <a class="btn primary" href="#library">Browse curated papers</a>
@@ -449,10 +449,10 @@
           <div class="tax-card fm">
             <h4>1. Foundation Model Improvement <span class="mini-count">61 papers</span></h4>
             <ul>
-              <li><a href="#sgd">1.1 Self-Generated Data</a> <span class="mini-count">17</span></li>
-              <li><a href="#supervision">1.2 Self-Generated Supervision</a> <span class="mini-count">19</span></li>
-              <li><a href="#experience-env">1.3.1 Environment-Interactive</a> <span class="mini-count">14</span></li>
-              <li><a href="#experience-world">1.3.2 World Models</a> <span class="mini-count">11</span></li>
+              <li><a href="#sgd">1.1 Intrinsic Generative Demonstrations</a> <span class="mini-count">17</span></li>
+              <li><a href="#evaluative-feedback">1.2 Intrinsic Evaluative Feedback</a> <span class="mini-count">19</span></li>
+              <li><a href="#experience-env">1.3.1 Grounded Executable Environments</a> <span class="mini-count">14</span></li>
+              <li><a href="#experience-world">1.3.2 Generative World Models</a> <span class="mini-count">11</span></li>
             </ul>
           </div>
 
@@ -478,7 +478,7 @@
           who want to understand the landscape quickly before diving into the full library.
         </p>
         <div class="card-grid">
-          <div class="ref-card"><strong><a href="https://arxiv.org/abs/2212.10560" target="_blank" rel="noopener">Self-Instruct</a></strong><div class="meta">2023 · 1.1 Self-Generated Data</div><p>A canonical example of self-synthetic instruction generation for model alignment.</p></div><div class="ref-card"><strong><a href="https://arxiv.org/abs/2212.08073" target="_blank" rel="noopener">Constitutional AI</a></strong><div class="meta">2022 · 1.2 Self-Generated Supervision</div><p>An influential AI-feedback framework for self-generated critique and revision.</p></div><div class="ref-card"><strong><a href="https://arxiv.org/abs/2411.02337" target="_blank" rel="noopener">WebRL</a></strong><div class="meta">2025 · 1.3.1 Environment-Interactive</div><p>A representative web-agent training setup built around reinforcement learning and evolving curricula.</p></div><div class="ref-card"><strong><a href="https://arxiv.org/abs/2410.13232" target="_blank" rel="noopener">Web Agents with World Models</a></strong><div class="meta">2025 · 1.3.2 World Models</div><p>A concrete example of using learned environment dynamics to improve web agents.</p></div><div class="ref-card"><strong><a href="https://arxiv.org/abs/2303.17651" target="_blank" rel="noopener">Self-Refine</a></strong><div class="meta">2023 · 2.1.2 Qualitative-Feedback Refinement</div><p>A classic self-feedback loop for iterative improvement at the prompt/output level.</p></div><div class="ref-card"><strong><a href="https://arxiv.org/abs/2406.07496" target="_blank" rel="noopener">TextGrad</a></strong><div class="meta">2025 · 2.1.4 Textual Gradient Optimization</div><p>An influential formulation of automatic optimization via textual gradients.</p></div><div class="ref-card"><strong><a href="https://arxiv.org/abs/2305.10250" target="_blank" rel="noopener">MemoryBank</a></strong><div class="meta">2024 · 2.2.2 Memory Structure</div><p>A representative long-term memory architecture for LLM-based agents.</p></div><div class="ref-card"><strong><a href="https://arxiv.org/abs/2305.16291" target="_blank" rel="noopener">Voyager</a></strong><div class="meta">2023 · 2.3.1 Dynamic Tool Routing</div><p>An open-ended embodied agent that accumulates skills and uses tools in a growing scaffold.</p></div><div class="ref-card"><strong><a href="https://arxiv.org/abs/2505.22954" target="_blank" rel="noopener">Darwin Godel Machine</a></strong><div class="meta">2025 · 2.4 Full Scaffolding</div><p>A strong representative for recursive self-improving agents that modify their broader operating logic.</p></div>
+          <div class="ref-card"><strong><a href="https://arxiv.org/abs/2212.10560" target="_blank" rel="noopener">Self-Instruct</a></strong><div class="meta">2023 · 1.1 Intrinsic Generative Demonstrations</div><p>A canonical example of self-synthetic instruction generation for model alignment.</p></div><div class="ref-card"><strong><a href="https://arxiv.org/abs/2212.08073" target="_blank" rel="noopener">Constitutional AI</a></strong><div class="meta">2022 · 1.2 Intrinsic Evaluative Feedback</div><p>An influential AI-feedback framework where model-based judgments are used for alignment and policy optimization.</p></div><div class="ref-card"><strong><a href="https://arxiv.org/abs/2411.02337" target="_blank" rel="noopener">WebRL</a></strong><div class="meta">2025 · 1.3.1 Grounded Executable Environments</div><p>A representative web-agent training setup built around reinforcement learning and evolving curricula.</p></div><div class="ref-card"><strong><a href="https://arxiv.org/abs/2410.13232" target="_blank" rel="noopener">Web Agents with World Models</a></strong><div class="meta">2025 · 1.3.2 Generative World Models</div><p>A concrete example of using learned environment dynamics to improve web agents.</p></div><div class="ref-card"><strong><a href="https://arxiv.org/abs/2303.17651" target="_blank" rel="noopener">Self-Refine</a></strong><div class="meta">2023 · 2.1.2 Qualitative-Feedback Refinement</div><p>A classic self-feedback loop for iterative improvement at the prompt/output level.</p></div><div class="ref-card"><strong><a href="https://arxiv.org/abs/2406.07496" target="_blank" rel="noopener">TextGrad</a></strong><div class="meta">2025 · 2.1.4 Textual Gradient Optimization</div><p>An influential formulation of automatic optimization via textual gradients.</p></div><div class="ref-card"><strong><a href="https://arxiv.org/abs/2305.10250" target="_blank" rel="noopener">MemoryBank</a></strong><div class="meta">2024 · 2.2.2 Memory Structure</div><p>A representative long-term memory architecture for LLM-based agents.</p></div><div class="ref-card"><strong><a href="https://arxiv.org/abs/2305.16291" target="_blank" rel="noopener">Voyager</a></strong><div class="meta">2023 · 2.3.1 Dynamic Tool Routing</div><p>An open-ended embodied agent that accumulates skills and uses tools in a growing scaffold.</p></div><div class="ref-card"><strong><a href="https://arxiv.org/abs/2505.22954" target="_blank" rel="noopener">Darwin Godel Machine</a></strong><div class="meta">2025 · 2.4 Full Scaffolding</div><p>A strong representative for recursive self-improving agents that modify their broader operating logic.</p></div>
         </div>
       </section>
 
@@ -506,8 +506,8 @@
       <div class="library-block" id="sgd">
         <div class="block-head">
           <div>
-            <h3>1.1 Self-Generated Data</h3>
-            <p>The agent or model improves by synthesizing its own training data, instruction sets, reasoning traces, or task distributions.</p>
+            <h3>1.1 Intrinsic Generative Demonstrations</h3>
+            <p>The agent or model improves by synthesizing demonstrations, instruction sets, reasoning traces, or task distributions that can be used for imitation-style parameter updates.</p>
           </div>
           <div class="count-badge">17 papers</div>
         </div>
@@ -677,10 +677,10 @@
     
       </div>
 
-      <div class="library-block" id="supervision">
+      <div class="library-block" id="evaluative-feedback">
         <div class="block-head">
           <div>
-            <h3>1.2 Self-Generated Supervision</h3>
+            <h3>1.2 Intrinsic Evaluative Feedback</h3>
             <p>The system derives its own reward, critique, verification signal, or intrinsic supervision to guide further updates.</p>
           </div>
           <div class="count-badge">19 papers</div>
@@ -872,17 +872,17 @@
       <div class="library-block" id="experience">
         <div class="block-head">
           <div>
-            <h3>1.3 Self-Generated Experience</h3>
+            <h3>1.3 Extrinsic Exploratory Experience</h3>
             <p>The agent improves through trajectories gathered from interaction with environments or learned simulators.</p>
           </div>
           <div class="count-badge">25 papers</div>
         </div>
         <details class="subgroup" open>
           <summary id="experience-env">
-            <span>1.3.1 Environment-Interactive</span>
+            <span>1.3.1 Grounded Executable Environments</span>
             <span class="count-badge small">14 papers</span>
           </summary>
-          <p class="sub-desc">Learning from real or simulated interaction trajectories gathered through action in external environments.</p>
+          <p class="sub-desc">Learning from trajectories, rewards, or observations obtained by acting in executable environments such as code runtimes, web interfaces, games, GUI systems, or robotics simulators.</p>
           
       <div class="table-wrap">
         <table class="paper-table">
@@ -1023,7 +1023,7 @@
         </details>
         <details class="subgroup">
           <summary id="experience-world">
-            <span>1.3.2 World Models</span>
+            <span>1.3.2 Generative World Models</span>
             <span class="count-badge small">11 papers</span>
           </summary>
           <p class="sub-desc">Using learned world models, simulators, or imagined rollouts to improve agent behavior.</p>
