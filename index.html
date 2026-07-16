@@ -56,7 +56,8 @@
       display:grid; grid-template-columns:280px minmax(0,1fr); gap:40px;
     }
     .sidebar {
-      position:sticky; top:74px; align-self:start;
+      position:sticky; top:74px; align-self:start; max-height: calc(100vh - 90px); 
+      overflow-y: auto; overflow-x: hidden; overscroll-behavior-y: contain; padding-right: 8px; scrollbar-gutter: stable;
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
     }
     .side-card {
@@ -321,7 +322,7 @@
 
     @media (max-width: 980px) {
       .page { grid-template-columns:1fr; }
-      .sidebar { position:static; }
+      .sidebar { position:static; max-height: none; overflow: visible; padding-right: 0; scrollbar-gutter: auto; }
       .overview-grid, .two-col, .tax-grid { grid-template-columns:1fr; }
       .card-grid { grid-template-columns:1fr 1fr; }
     }
