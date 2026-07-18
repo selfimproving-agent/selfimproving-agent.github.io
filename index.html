@@ -275,6 +275,107 @@
       display:flex; flex-wrap:wrap; gap:10px; margin-top:12px;
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
     }
+
+    /* Community & engagement */
+    .community-head {
+      display:flex; align-items:flex-start; justify-content:space-between; gap:24px;
+      padding-bottom:22px; margin-bottom:20px; border-bottom:1px solid var(--line);
+    }
+    .community-kicker {
+      margin-bottom:8px;
+      font:700 11px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--scaf); text-transform:uppercase; letter-spacing:.12em;
+    }
+    .community-head h2 { margin-bottom:8px; }
+    .community-head p { max-width:720px; color:#4b5563; margin:0; }
+    .community-star-cta {
+      flex:none; display:inline-flex; align-items:center; gap:9px;
+      padding:11px 14px; border-radius:12px; background:#111827; color:#fff;
+      border:1px solid #111827;
+      font:650 14px/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      box-shadow:0 8px 20px rgba(17,24,39,.12);
+    }
+    .community-star-cta:hover { text-decoration:none; transform:translateY(-1px); }
+    .community-star-cta .star-symbol { color:#fbbf24; font-size:17px; }
+    .community-star-cta strong {
+      min-width:24px; padding-left:8px; border-left:1px solid rgba(255,255,255,.25);
+      font-variant-numeric:tabular-nums;
+    }
+    .engagement-grid {
+      display:grid; grid-template-columns:1.05fr .95fr .95fr; gap:14px; margin-bottom:18px;
+    }
+    .engagement-card {
+      border:1px solid var(--line); border-radius:16px; padding:18px; background:#fff;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    .engagement-card h3 {
+      display:flex; align-items:center; gap:8px; margin:0 0 8px;
+      font-size:17px; line-height:1.25;
+    }
+    .engagement-card > p {
+      color:var(--muted); font-size:13px; line-height:1.55; margin:0 0 14px;
+    }
+    .pulse-grid {
+      display:grid; grid-template-columns:repeat(3,1fr); gap:9px;
+    }
+    .pulse {
+      padding:12px 9px; text-align:center; border:1px solid var(--line);
+      border-radius:12px; background:var(--soft);
+    }
+    .pulse strong {
+      display:block; font-size:22px; line-height:1.1; color:#111827;
+      font-variant-numeric:tabular-nums;
+    }
+    .pulse span {
+      display:block; margin-top:5px; color:var(--muted); font-size:11px;
+      text-transform:uppercase; letter-spacing:.06em;
+    }
+    .pulse-status {
+      display:flex; align-items:center; gap:7px; margin-top:11px; color:var(--muted); font-size:12px;
+    }
+    .pulse-status::before {
+      content:""; width:7px; height:7px; border-radius:50%; background:#d1d5db;
+    }
+    .pulse-status.live::before { background:#10b981; box-shadow:0 0 0 3px rgba(16,185,129,.12); }
+    .community-links {
+      display:grid; gap:9px;
+    }
+    .community-link {
+      display:flex; justify-content:space-between; align-items:center; gap:12px;
+      padding:10px 11px; border:1px solid var(--line); border-radius:11px;
+      color:#1f2937; background:#fcfcfd; font-size:13px; font-weight:650;
+    }
+    .community-link:hover {
+      text-decoration:none; border-color:#c7d2fe; background:#f8fafc;
+    }
+    .community-link span:last-child { color:#9ca3af; font-weight:500; }
+    .community-link.primary {
+      color:#fff; background:#1d4ed8; border-color:#1d4ed8;
+    }
+    .community-link.primary span:last-child { color:#dbeafe; }
+    .discussion-panel {
+      display:grid; grid-template-columns:270px minmax(0,1fr); gap:20px;
+      padding:20px; border:1px solid var(--line); border-radius:16px;
+      background:linear-gradient(135deg,#fbfdff 0%,#f8fafc 100%);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+    .discussion-copy h3 { margin:0 0 8px; font-size:18px; }
+    .discussion-copy p { color:#4b5563; font-size:13px; line-height:1.6; margin:0 0 12px; }
+    .discussion-copy .privacy-note {
+      padding:10px 11px; border-radius:10px; background:#eef2ff; color:#3730a3;
+      font-size:12px; line-height:1.5;
+    }
+    .discussion-host {
+      min-height:170px; border:1px dashed #cbd5e1; border-radius:13px; background:#fff;
+      padding:16px;
+    }
+    .discussion-placeholder {
+      display:flex; min-height:136px; align-items:center; justify-content:center; text-align:center;
+      color:var(--muted); font-size:13px; line-height:1.6;
+    }
+    .discussion-placeholder strong { display:block; color:#374151; margin-bottom:3px; }
+    .utterances { max-width:none !important; }
+
     footer {
       max-width:var(--max); margin:0 auto; padding:0 24px 40px;
       color:var(--muted); font:13px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
@@ -328,9 +429,16 @@
       .page { grid-template-columns:1fr; }
       .sidebar { position:static; max-height: none; overflow: visible; padding-right: 0; scrollbar-gutter: auto; }
       .overview-grid, .two-col, .tax-grid { grid-template-columns:1fr; }
+      .engagement-grid { grid-template-columns:1fr 1fr; }
+      .engagement-card:first-child { grid-column:1 / -1; }
+      .discussion-panel { grid-template-columns:1fr; }
       .card-grid { grid-template-columns:1fr 1fr; }
     }
     @media (max-width: 760px) {
+      .community-head { flex-direction:column; }
+      .community-star-cta { width:100%; justify-content:center; }
+      .engagement-grid, .discussion-panel { grid-template-columns:1fr; }
+      .pulse-grid { grid-template-columns:repeat(3,1fr); }
       h1 { font-size:34px; }
       h2 { font-size:26px; }
       .hero, section { padding:22px; }
@@ -348,6 +456,7 @@
 <a href="#abstract">Abstract</a>
 <a href="#taxonomy">Taxonomy</a>
 <a href="#library">Paper Library</a>
+<a href="#community">Community</a>
 <a href="#citation">Citation</a>
 </nav>
 </div>
@@ -367,7 +476,7 @@
 <div class="side-title">Contents</div>
 <a href="#abstract">Abstract</a><a href="#overview">Overview</a><a href="#recursive-note">Epigraph</a><a href="#taxonomy">Taxonomy</a><a href="#quickstart">Quick start: representative papers</a><a href="#library">Curated paper library</a>
 <a class="sub" href="#sgd">1.1 Intrinsic generative demonstrations</a><a class="sub" href="#evaluative-feedback">1.2 Intrinsic evaluative feedback</a><a class="sub" href="#experience-env">1.3.1 Grounded executable environments</a><a class="sub" href="#experience-world">1.3.2 Generative world models</a><a class="sub" href="#prompt-scalar">2.1.1 Scalar-feedback optimization</a><a class="sub" href="#prompt-qualitative">2.1.2 Qualitative-feedback refinement</a><a class="sub" href="#prompt-evolution">2.1.3 Population-based evolution</a><a class="sub" href="#prompt-textgrad">2.1.4 Textual gradient optimization</a><a class="sub" href="#memory-object">2.2.1 Memory object</a><a class="sub" href="#memory-structure">2.2.2 Memory structure</a><a class="sub" href="#memory-processing">2.2.3 Memory processing</a><a class="sub" href="#tool-routing">2.3.1 Dynamic tool routing</a><a class="sub" href="#tool-refine">2.3.2 Iterative tool refinement</a><a class="sub" href="#tool-create">2.3.3 Autonomous tool creation</a><a class="sub" href="#full-scaffolding">2.4 Full scaffolding</a>
-<a href="#reading-guide">How to read this survey</a><a href="#authors">Authors</a><a href="#citation">Citation</a>
+<a href="#reading-guide">How to read this survey</a><a href="#community">Community & feedback</a><a href="#authors">Authors</a><a href="#citation">Citation</a>
 </div>
 <div class="side-card">
 <div class="side-title">Project links</div>
@@ -396,6 +505,7 @@
 <a class="btn primary" href="#library">Browse curated papers</a>
 <a class="btn" href="#taxonomy">View taxonomy</a>
 <a class="btn" href="https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents" rel="noopener" target="_blank">GitHub repository</a>
+<a class="btn" href="#community">Community & feedback</a>
 </div>
 </div>
 <section id="abstract">
@@ -2745,6 +2855,87 @@
 </div>
 </div>
 </section>
+
+<section id="community">
+<div class="community-head">
+<div>
+<div class="community-kicker">Open research community</div>
+<h2>Community &amp; Feedback</h2>
+<p>
+  This survey is maintained as a living research map. Read the discussion, suggest missing work,
+  report corrections, or help improve the taxonomy.
+</p>
+</div>
+<a class="community-star-cta" href="https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents" rel="noopener" target="_blank">
+<span class="star-symbol">★</span>
+<span>Star on GitHub</span>
+<strong id="starCtaCount" aria-label="GitHub stars">—</strong>
+</a>
+</div>
+
+<div class="engagement-grid">
+<article class="engagement-card">
+<h3>📈 Project pulse</h3>
+<p>Live public activity from the GitHub repository.</p>
+<div class="pulse-grid">
+<div class="pulse"><strong id="githubStars">—</strong><span>Stars</span></div>
+<div class="pulse"><strong id="githubForks">—</strong><span>Forks</span></div>
+<div class="pulse"><strong id="githubIssues">—</strong><span>Open issues</span></div>
+</div>
+<div class="pulse-status" id="repoStatsStatus" aria-live="polite">Loading live repository data…</div>
+</article>
+
+<article class="engagement-card">
+<h3>💬 Join the conversation</h3>
+<p>Discuss the survey and follow its public community activity.</p>
+<div class="community-links">
+<a class="community-link primary" href="https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents/discussions" rel="noopener" target="_blank"><span>GitHub Discussions</span><span>Open ↗</span></a>
+<a class="community-link" href="https://discord.gg/fn5rYJhgaz" rel="noopener" target="_blank"><span>Discord community</span><span>Join ↗</span></a>
+<a class="community-link" href="https://huggingface.co/papers/2607.13104" rel="noopener" target="_blank"><span>Hugging Face paper page</span><span>View ↗</span></a>
+</div>
+</article>
+
+<article class="engagement-card">
+<h3>🧭 Help improve the map</h3>
+<p>Every correction and missing reference makes the survey more useful.</p>
+<div class="community-links">
+<a class="community-link primary" href="https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents/issues/new?title=%5BPaper%20Suggestion%5D%20&body=Paper%20title%3A%0AURL%3A%0ASuggested%20taxonomy%20location%3A%0AReason%20for%20inclusion%3A" rel="noopener" target="_blank"><span>Suggest a paper</span><span>Issue ↗</span></a>
+<a class="community-link" href="https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents/pulls" rel="noopener" target="_blank"><span>Submit a pull request</span><span>Contribute ↗</span></a>
+<a class="community-link" href="https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents/issues/new?title=%5BCorrection%5D%20&body=Page%20or%20section%3A%0ADescription%3A%0ASuggested%20correction%3A" rel="noopener" target="_blank"><span>Report a correction</span><span>Issue ↗</span></a>
+</div>
+</article>
+</div>
+
+<div class="discussion-panel">
+<div class="discussion-copy">
+<h3>Discussion &amp; comments</h3>
+<p>
+  Leave a question, reading note, or suggestion directly from this page. Comments are attached to
+  a public GitHub thread, so the conversation remains searchable and easy to moderate.
+</p>
+<div class="privacy-note">
+  GitHub sign-in is required to comment. No separate account or website database is needed.
+</div>
+</div>
+<div class="discussion-host" id="discussionHost">
+<div class="discussion-placeholder" id="utterancesPlaceholder">
+<div>
+<strong>GitHub-powered comments</strong>
+The comment panel appears here after the Utterances app is enabled for the repository.
+</div>
+</div>
+<script src="https://utteranc.es/client.js"
+        repo="selfimproving-agent/Awesome-Self-Improving-Agents"
+        issue-term="pathname"
+        label="website-feedback"
+        theme="github-light"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+</div>
+</section>
+
 <section id="authors">
 <h2>Authors</h2>
 <div class="authors">
@@ -2798,6 +2989,57 @@
     © 2026 SI-Agents Survey Team.
   </footer>
 <script>
+
+
+    (function loadCommunityData() {
+      const repo = "selfimproving-agent/Awesome-Self-Improving-Agents";
+      const compact = new Intl.NumberFormat("en", { notation: "compact", maximumFractionDigits: 1 });
+
+      function setText(id, value) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = value;
+      }
+
+      fetch(`https://api.github.com/repos/${repo}`, {
+        headers: { "Accept": "application/vnd.github+json" }
+      })
+        .then(response => {
+          if (!response.ok) throw new Error(`GitHub API returned ${response.status}`);
+          return response.json();
+        })
+        .then(data => {
+          const stars = compact.format(data.stargazers_count || 0);
+          setText("githubStars", stars);
+          setText("githubForks", compact.format(data.forks_count || 0));
+          setText("githubIssues", compact.format(data.open_issues_count || 0));
+          setText("starCtaCount", stars);
+          const status = document.getElementById("repoStatsStatus");
+          if (status) {
+            status.textContent = "Live data from GitHub";
+            status.classList.add("live");
+          }
+        })
+        .catch(() => {
+          setText("githubStars", "—");
+          setText("githubForks", "—");
+          setText("githubIssues", "—");
+          setText("starCtaCount", "★");
+          const status = document.getElementById("repoStatsStatus");
+          if (status) status.textContent = "Live data is temporarily unavailable";
+        });
+
+      const host = document.getElementById("discussionHost");
+      const placeholder = document.getElementById("utterancesPlaceholder");
+      if (host && placeholder) {
+        const observer = new MutationObserver(() => {
+          if (host.querySelector(".utterances, .utterances-frame")) {
+            placeholder.style.display = "none";
+            observer.disconnect();
+          }
+        });
+        observer.observe(host, { childList: true, subtree: true });
+      }
+    })();
 
     function openImageModal() {
       const modal = document.getElementById('imageModal');
@@ -2901,5 +3143,16 @@
       applyFilters();
     })();
   </script>
+
+<!--
+  Optional private visitor analytics:
+  1. Create a Cloudflare Web Analytics site.
+  2. Replace YOUR_CLOUDFLARE_TOKEN below.
+  3. Remove the surrounding HTML comment.
+
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token":"YOUR_CLOUDFLARE_TOKEN"}'></script>
+-->
+
 </body>
 </html>
