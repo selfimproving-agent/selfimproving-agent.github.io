@@ -456,6 +456,7 @@
 <a href="#abstract">Abstract</a>
 <a href="#taxonomy">Taxonomy</a>
 <a href="#library">Paper Library</a>
+<a href="#evaluation">Evaluation</a>
 <a href="#community">Community</a>
 <a href="#citation">Citation</a>
 </nav>
@@ -469,14 +470,14 @@
           A curated map of self-improvement mechanisms in foundation model-based agentic systems.
         </div>
 <div class="stat-grid">
-<div class="stat"><strong>239</strong><span>Curated papers</span></div><div class="stat"><strong>73</strong><span>FM improvement</span></div><div class="stat"><strong>166</strong><span>Scaffolding improvement</span></div><div class="stat"><strong>15</strong><span>Fine-grained sections</span></div>
+<div class="stat"><strong>312</strong><span>Curated entries</span></div><div class="stat"><strong>77</strong><span>FM improvement</span></div><div class="stat"><strong>176</strong><span>Scaffolding improvement</span></div><div class="stat"><strong>59</strong><span>Evaluation &amp; benchmark</span></div>
 </div>
 </div>
 <div class="side-card toc">
 <div class="side-title">Contents</div>
-<a href="#abstract">Abstract</a><a href="#overview">Overview</a><a href="#recursive-note">Epigraph</a><a href="#taxonomy">Taxonomy</a><a href="#quickstart">Quick start: representative papers</a><a href="#library">Curated paper library</a>
+<a href="#abstract">Abstract</a><a href="#overview">Overview</a><a href="#recursive-note">Epigraph</a><a href="#taxonomy">Taxonomy</a><a href="#quickstart">Quick start: representative papers</a><a href="#library">Curated paper library</a><a href="#evaluation">Evaluation &amp; benchmarking</a>
 <a class="sub" href="#sgd">1.1 Intrinsic generative demonstrations</a><a class="sub" href="#evaluative-feedback">1.2 Intrinsic evaluative feedback</a><a class="sub" href="#experience-env">1.3.1 Grounded executable environments</a><a class="sub" href="#experience-world">1.3.2 Generative world models</a><a class="sub" href="#prompt-scalar">2.1.1 Scalar-feedback optimization</a><a class="sub" href="#prompt-qualitative">2.1.2 Qualitative-feedback refinement</a><a class="sub" href="#prompt-evolution">2.1.3 Population-based evolution</a><a class="sub" href="#prompt-textgrad">2.1.4 Textual gradient optimization</a><a class="sub" href="#memory-object">2.2.1 Memory object</a><a class="sub" href="#memory-structure">2.2.2 Memory structure</a><a class="sub" href="#memory-processing">2.2.3 Memory processing</a><a class="sub" href="#tool-routing">2.3.1 Dynamic tool routing</a><a class="sub" href="#tool-refine">2.3.2 Iterative tool refinement</a><a class="sub" href="#tool-create">2.3.3 Autonomous tool creation</a><a class="sub" href="#full-scaffolding">2.4 Full scaffolding</a>
-<a href="#reading-guide">How to read this survey</a><a href="#community">Community & feedback</a><a href="#authors">Authors</a><a href="#citation">Citation</a>
+<a href="#reading-guide">How to read this survey</a><a href="#community">Community &amp; feedback</a><a href="#authors">Authors</a><a href="#citation">Citation</a>
 </div>
 <div class="side-card">
 <div class="side-title">Project links</div>
@@ -505,7 +506,7 @@
 <a class="btn primary" href="#library">Browse curated papers</a>
 <a class="btn" href="#taxonomy">View taxonomy</a>
 <a class="btn" href="https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents" rel="noopener" target="_blank">GitHub repository</a>
-<a class="btn" href="#community">Community & feedback</a>
+<a class="btn" href="#community">Community &amp; feedback</a>
 </div>
 </div>
 <section id="abstract">
@@ -555,27 +556,25 @@
         </p>
 <div class="tax-grid">
 <div class="tax-card fm">
-<h4>1. Foundation Model Improvement <span class="mini-count">73 papers</span></h4>
+<h4>1. Foundation Model Improvement <span class="mini-count">77 papers</span></h4>
 <ul>
-<li><a href="#sgd">1.1 Intrinsic Generative Demonstrations</a> <span class="mini-count">20</span></li>
+<li><a href="#sgd">1.1 Intrinsic Generative Demonstrations</a> <span class="mini-count">23</span></li>
 <li><a href="#evaluative-feedback">1.2 Intrinsic Evaluative Feedback</a> <span class="mini-count">21</span></li>
-<li><a href="#experience-env">1.3.1 Grounded Executable Environments</a> <span class="mini-count">17</span></li>
+<li><a href="#experience-env">1.3.1 Grounded Executable Environments</a> <span class="mini-count">18</span></li>
 <li><a href="#experience-world">1.3.2 Generative World Models</a> <span class="mini-count">15</span></li>
 </ul>
 </div>
 <div class="tax-card scaf">
-<h4>2. Scaffolding Improvement <span class="mini-count">166 papers</span></h4>
+<h4>2. Scaffolding Improvement <span class="mini-count">176 papers</span></h4>
 <ul>
-<li><a href="#prompt-scalar">2.1 Prompt Optimization</a> <span class="mini-count">37</span></li>
-<li><a href="#memory-object">2.2 Memory</a> <span class="mini-count">61</span></li>
-<li><a href="#tool-routing">2.3 Tool</a> <span class="mini-count">50</span></li>
-<li><a href="#full-scaffolding">2.4 Full Scaffolding</a> <span class="mini-count">18</span></li>
+<li><a href="#prompt-scalar">2.1 Prompt Optimization</a> <span class="mini-count">39</span></li>
+<li><a href="#memory-object">2.2 Memory</a> <span class="mini-count">65</span></li>
+<li><a href="#tool-routing">2.3 Tool</a> <span class="mini-count">51</span></li>
+<li><a href="#full-scaffolding">2.4 Full Scaffolding</a> <span class="mini-count">21</span></li>
 </ul>
 </div>
 </div>
-<div class="note">
-          Counts indicate the number of curated entries currently listed under each branch and subsection.
-        </div>
+<div class="note">Counts here follow categorized literature entries rather than deduplicated papers. The self-improvement taxonomy contains 253 entries (77 FM-level and 176 scaffolding-level), while Evaluation &amp; Benchmarking contributes 59 categorized entries, for 312 entries across the page.</div>
 </section>
 <section id="quickstart">
 <h2>Quick start: representative papers</h2>
@@ -604,7 +603,7 @@
 <button class="chip" data-filter="recent" type="button">2025+</button>
 <button class="chip" data-filter="code" type="button">Has code</button>
 </div>
-<div class="toolbar-meta"><span id="visibleCount">239</span> visible papers</div>
+<div class="toolbar-meta"><span id="visibleCount">253</span> visible taxonomy entries</div>
 </div>
 <div class="library-block" id="sgd">
 <div class="block-head">
@@ -612,7 +611,7 @@
 <h3>1.1 Intrinsic Generative Demonstrations</h3>
 <p>The agent or model improves by synthesizing demonstrations, instruction sets, reasoning traces, or task distributions that can be used for imitation-style parameter updates.</p>
 </div>
-<div class="count-badge">20 papers</div>
+<div class="count-badge">23 papers</div>
 </div>
 <div class="table-wrap">
 <table class="paper-table">
@@ -748,6 +747,14 @@
 <td>ICML</td>
 <td class="links"><a href="https://arxiv.org/abs/2411.04109" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
 </tr>
+<tr class="paper-row" data-branch="fm" data-search="2025 adapting while learning: grounding llms for scientific problems with tool usage adaptation icml" data-year="2025">
+<td class="year">2025</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2411.00412" rel="noopener" target="_blank">Adapting While Learning: Grounding LLMs for Scientific Problems with Tool Usage Adaptation</a>
+</td>
+<td>ICML</td>
+<td class="links"><a href="https://arxiv.org/abs/2411.00412" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/Rose-STL-Lab/Adapting-While-Learning" rel="noopener" target="_blank">Code</a></td>
+</tr>
 <tr class="paper-row" data-branch="fm" data-search="2026 reinforcing general reasoning without verifiers iclr" data-year="2026">
 <td class="year">2026</td>
 <td class="title-cell">
@@ -756,34 +763,31 @@
 <td>ICLR</td>
 <td class="links"><a href="https://arxiv.org/abs/2505.21493" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/sail-sg/VeriFree" rel="noopener" target="_blank">Code</a></td>
 </tr>
-
-          <tr class="paper-row" data-branch="fm" data-search="2026 sage: multi-agent self-evolution for llm reasoning arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2603.15255" rel="noopener" target="_blank">SAGE: Multi-Agent Self-Evolution for LLM Reasoning</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2603.15255" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="fm" data-search="2026 andes: agent native data evolving synthesis tool for autonomous instruction alignment arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2606.01279" rel="noopener" target="_blank">ANDES: Agent Native Data Evolving Synthesis Tool for Autonomous Instruction Alignment</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2606.01279" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/zzy1127/ANDES" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="fm" data-search="2026 evoground: self-evolving video agents for video temporal grounding arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2605.13803" rel="noopener" target="_blank">EvoGround: Self-Evolving Video Agents for Video Temporal Grounding</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2605.13803" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/minjoong507/EvoGround" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        </tbody>
+<tr class="paper-row" data-branch="fm" data-search="2026 sage: multi-agent self-evolution for llm reasoning arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2603.15255" rel="noopener" target="_blank">SAGE: Multi-Agent Self-Evolution for LLM Reasoning</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2603.15255" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="fm" data-search="2026 andes: agent native data evolving synthesis tool for autonomous instruction alignment arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.01279" rel="noopener" target="_blank">ANDES: Agent Native Data Evolving Synthesis Tool for Autonomous Instruction Alignment</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.01279" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/zzy1127/ANDES" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="fm" data-search="2026 evoground: self-evolving video agents for video temporal grounding arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2605.13803" rel="noopener" target="_blank">EvoGround: Self-Evolving Video Agents for Video Temporal Grounding</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2605.13803" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/minjoong507/EvoGround" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="fm" data-search="2026 from self-evolving synthetic data to verifiable-reward rl: post-training multi-turn interactive tool-using agents arxiv areal-sea" data-year="2026"><td class="year">2026</td><td class="title-cell"><a href="https://arxiv.org/abs/2601.22607" rel="noopener" target="_blank">From Self-Evolving Synthetic Data to Verifiable-Reward RL: Post-Training Multi-turn Interactive Tool-Using Agents</a></td><td>arXiv</td><td class="links"><a href="https://arxiv.org/abs/2601.22607" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td></tr><tr class="paper-row" data-branch="fm" data-search="2026 ragshaper: eliciting sophisticated agentic rag skills via automated data synthesis arxiv ragshaper" data-year="2026"><td class="year">2026</td><td class="title-cell"><a href="https://arxiv.org/abs/2601.08699" rel="noopener" target="_blank">RAGShaper: Eliciting Sophisticated Agentic RAG Skills via Automated Data Synthesis</a></td><td>arXiv</td><td class="links"><a href="https://arxiv.org/abs/2601.08699" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td></tr></tbody>
 </table>
 </div>
 </div>
@@ -953,25 +957,23 @@
 <td>arXiv</td>
 <td class="links"><a href="https://arxiv.org/abs/2601.03193" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/Hungryyan1/UniCorn" rel="noopener" target="_blank">Code</a></td>
 </tr>
-
-          <tr class="paper-row" data-branch="fm" data-search="2026 retrospective progress-aware self-refinement for llm agent training arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2606.14302" rel="noopener" target="_blank">Retrospective Progress-Aware Self-Refinement for LLM Agent Training</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2606.14302" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="fm" data-search="2026 eve-agent: evidence-verifiable self-evolving agents arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2605.22905" rel="noopener" target="_blank">EVE-Agent: Evidence-Verifiable Self-Evolving Agents</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2605.22905" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        </tbody>
+<tr class="paper-row" data-branch="fm" data-search="2026 retrospective progress-aware self-refinement for llm agent training arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.14302" rel="noopener" target="_blank">Retrospective Progress-Aware Self-Refinement for LLM Agent Training</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.14302" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="fm" data-search="2026 eve-agent: evidence-verifiable self-evolving agents arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2605.22905" rel="noopener" target="_blank">EVE-Agent: Evidence-Verifiable Self-Evolving Agents</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2605.22905" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+</tbody>
 </table>
 </div>
 </div>
@@ -981,12 +983,12 @@
 <h3>1.3 Extrinsic Exploratory Experience</h3>
 <p>The agent improves through trajectories gathered from interaction with environments or learned simulators.</p>
 </div>
-<div class="count-badge">32 papers</div>
+<div class="count-badge">33 papers</div>
 </div>
 <details class="subgroup" open="">
 <summary id="experience-env">
 <span>1.3.1 Grounded Executable Environments</span>
-<span class="count-badge small">17 papers</span>
+<span class="count-badge small">18 papers</span>
 </summary>
 <p class="sub-desc">Learning from trajectories, rewards, or observations obtained by acting in executable environments such as code runtimes, web interfaces, games, GUI systems, or robotics simulators.</p>
 <div class="table-wrap">
@@ -1107,34 +1109,39 @@
 <td>ICLR</td>
 <td class="links"><a href="https://arxiv.org/abs/2507.11948" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
 </tr>
-
-          <tr class="paper-row" data-branch="fm" data-search="2026 tool-r0: self-evolving llm agents for tool-learning from zero data arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2602.21320" rel="noopener" target="_blank">Tool-R0: Self-Evolving LLM Agents for Tool-Learning from Zero Data</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2602.21320" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/emrecanacikgoz/Tool-R0" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="fm" data-search="2026 socratic-swe: self-evolving coding agents via trace-derived agent skills arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2606.07412" rel="noopener" target="_blank">Socratic-SWE: Self-Evolving Coding Agents via Trace-Derived Agent Skills</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2606.07412" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="fm" data-search="2026 self-evolving llm agents with in-distribution optimization icml" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2606.07367" rel="noopener" target="_blank">Self-evolving LLM Agents with In-Distribution Optimization</a>
-            </td>
-            <td>ICML</td>
-            <td class="links"><a href="https://arxiv.org/abs/2606.07367" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        </tbody>
+<tr class="paper-row" data-branch="fm" data-search="2026 tool-r0: self-evolving llm agents for tool-learning from zero data arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2602.21320" rel="noopener" target="_blank">Tool-R0: Self-Evolving LLM Agents for Tool-Learning from Zero Data</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2602.21320" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/emrecanacikgoz/Tool-R0" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="fm" data-search="2026 socratic-swe: self-evolving coding agents via trace-derived agent skills arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.07412" rel="noopener" target="_blank">Socratic-SWE: Self-Evolving Coding Agents via Trace-Derived Agent Skills</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.07412" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="fm" data-search="2026 self-evolving llm agents with in-distribution optimization icml" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.07367" rel="noopener" target="_blank">Self-evolving LLM Agents with In-Distribution Optimization</a>
+</td>
+<td>ICML</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.07367" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="fm" data-search="2026 skill self-play: pushing the frontier of llm capability with co-evolving skills arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2607.22529" rel="noopener" target="_blank">Skill Self-Play: Pushing the Frontier of LLM Capability with Co-Evolving Skills</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2607.22529" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/Qwen-Applications/skill-self-play" rel="noopener" target="_blank">Code</a></td>
+</tr>
+</tbody>
 </table>
 </div>
 </details>
@@ -1238,43 +1245,39 @@
 <td>arXiv</td>
 <td class="links"><a href="https://arxiv.org/abs/2601.00930" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
 </tr>
-
-          <tr class="paper-row" data-branch="fm" data-search="2026 self-evolving world models for llm agent planning arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2606.30639" rel="noopener" target="_blank">Self-Evolving World Models for LLM Agent Planning</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2606.30639" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="fm" data-search="2025 navmorph: a self-evolving world model for vision-and-language navigation in continuous environments iccv" data-year="2025">
-            <td class="year">2025</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2506.23468" rel="noopener" target="_blank">NavMorph: A Self-Evolving World Model for Vision-and-Language Navigation in Continuous Environments</a>
-            </td>
-            <td>ICCV</td>
-            <td class="links"><a href="https://arxiv.org/abs/2506.23468" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/Feliciaxyao/NavMorph" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="fm" data-search="2025 evoworld: evolving panoramic world generation with explicit 3d memory arxiv" data-year="2025">
-            <td class="year">2025</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2510.01183" rel="noopener" target="_blank">EvoWorld: Evolving Panoramic World Generation with Explicit 3D Memory</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2510.01183" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/JiahaoPlus/EvoWorld" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="fm" data-search="2026 rise: self-improving robot policy with compositional world model rss" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2602.11075" rel="noopener" target="_blank">RISE: Self-Improving Robot Policy with Compositional World Model</a>
-            </td>
-            <td>RSS</td>
-            <td class="links"><a href="https://arxiv.org/abs/2602.11075" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/OpenDriveLab/RISE" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        </tbody>
+<tr class="paper-row" data-branch="fm" data-search="2026 self-evolving world models for llm agent planning arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.30639" rel="noopener" target="_blank">Self-Evolving World Models for LLM Agent Planning</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.30639" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="fm" data-search="2025 navmorph: a self-evolving world model for vision-and-language navigation in continuous environments iccv" data-year="2025">
+<td class="year">2025</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2506.23468" rel="noopener" target="_blank">NavMorph: A Self-Evolving World Model for Vision-and-Language Navigation in Continuous Environments</a>
+</td>
+<td>ICCV</td>
+<td class="links"><a href="https://arxiv.org/abs/2506.23468" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/Feliciaxyao/NavMorph" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="fm" data-search="2025 evoworld: evolving panoramic world generation with explicit 3d memory arxiv" data-year="2025">
+<td class="year">2025</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2510.01183" rel="noopener" target="_blank">EvoWorld: Evolving Panoramic World Generation with Explicit 3D Memory</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2510.01183" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/JiahaoPlus/EvoWorld" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="fm" data-search="2026 rise: self-improving robot policy with compositional world model rss" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2602.11075" rel="noopener" target="_blank">RISE: Self-Improving Robot Policy with Compositional World Model</a>
+</td>
+<td>RSS</td>
+<td class="links"><a href="https://arxiv.org/abs/2602.11075" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/OpenDriveLab/RISE" rel="noopener" target="_blank">Code</a></td>
+</tr>
+</tbody>
 </table>
 </div>
 </details>
@@ -1285,7 +1288,7 @@
 <h3>2.1 Prompt Optimization</h3>
 <p>The agent improves the prompt layer through scoring, reflection, evolutionary search, or textual-gradient style updates.</p>
 </div>
-<div class="count-badge">37 papers</div>
+<div class="count-badge">39 papers</div>
 </div>
 <details class="subgroup" open="">
 <summary id="prompt-scalar">
@@ -1363,31 +1366,29 @@
 <td>FRUCT</td>
 <td class="links"><a href="https://ieeexplore.ieee.org/document/11239071" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
 </tr>
-
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 sepo: self-evolving prompt agent for system prompt optimization arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2606.04465" rel="noopener" target="_blank">SePO: Self-Evolving Prompt Agent for System Prompt Optimization</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2606.04465" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/taowangcheng/SePO" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 sage: stochastic prompt optimization via agent-guided exploration arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2606.18902" rel="noopener" target="_blank">SAGE: Stochastic Prompt Optimization via Agent-Guided Exploration</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2606.18902" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        </tbody>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 sepo: self-evolving prompt agent for system prompt optimization arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.04465" rel="noopener" target="_blank">SePO: Self-Evolving Prompt Agent for System Prompt Optimization</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.04465" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/taowangcheng/SePO" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 sage: stochastic prompt optimization via agent-guided exploration arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.18902" rel="noopener" target="_blank">SAGE: Stochastic Prompt Optimization via Agent-Guided Exploration</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.18902" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+</tbody>
 </table>
 </div>
 </details><details class="subgroup">
 <summary id="prompt-qualitative">
 <span>2.1.2 Qualitative-Feedback Refinement</span>
-<span class="count-badge small">10 papers</span>
+<span class="count-badge small">11 papers</span>
 </summary>
 <p class="sub-desc">Improving prompts through critiques, revisions, hindsight, or other natural-language feedback.</p>
 <div class="table-wrap">
@@ -1420,7 +1421,7 @@
 <td>NeurIPS</td>
 <td class="links"><a href="https://arxiv.org/abs/2303.11366" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/noahshinn/reflexion" rel="noopener" target="_blank">Code</a></td>
 </tr>
-<tr class="paper-row" data-branch="scaffolding" data-search="2024 self-improving customer review response generation based on llms coling" data-year="2024">
+<tr class="paper-row" data-branch="scaffolding" data-search="2023 encouraging divergent thinking in large language models through multi-agent debate arxiv multi-agent debate mad" data-year="2023"><td class="year">2023</td><td class="title-cell"><a href="https://arxiv.org/abs/2305.19118" rel="noopener" target="_blank">Encouraging Divergent Thinking in Large Language Models through Multi-Agent Debate</a></td><td>arXiv</td><td class="links"><a href="https://arxiv.org/abs/2305.19118" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/Skytliang/Multi-Agents-Debate" rel="noopener" target="_blank">Code</a></td></tr><tr class="paper-row" data-branch="scaffolding" data-search="2024 self-improving customer review response generation based on llms coling" data-year="2024">
 <td class="year">2024</td>
 <td class="title-cell">
 <a href="https://arxiv.org/abs/2405.03845" rel="noopener" target="_blank">Self-Improving Customer Review Response Generation Based on LLMs</a>
@@ -1468,16 +1469,15 @@
 <td>ICLR</td>
 <td class="links"><a href="https://arxiv.org/abs/2507.19457" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/gepa-ai/gepa" rel="noopener" target="_blank">Code</a></td>
 </tr>
-
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 forge: self-evolving agent memory with no weight updates via population broadcast cais" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2605.16233" rel="noopener" target="_blank">FORGE: Self-Evolving Agent Memory With No Weight Updates via Population Broadcast</a>
-            </td>
-            <td>CAIS</td>
-            <td class="links"><a href="https://arxiv.org/abs/2605.16233" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        </tbody>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 forge: self-evolving agent memory with no weight updates via population broadcast cais" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2605.16233" rel="noopener" target="_blank">FORGE: Self-Evolving Agent Memory With No Weight Updates via Population Broadcast</a>
+</td>
+<td>CAIS</td>
+<td class="links"><a href="https://arxiv.org/abs/2605.16233" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+</tbody>
 </table>
 </div>
 </details><details class="subgroup">
@@ -1546,7 +1546,7 @@
 </details><details class="subgroup">
 <summary id="prompt-textgrad">
 <span>2.1.4 Textual Gradient Optimization</span>
-<span class="count-badge small">11 papers</span>
+<span class="count-badge small">12 papers</span>
 </summary>
 <p class="sub-desc">Treating language feedback like gradients for automatic textual optimization.</p>
 <div class="table-wrap">
@@ -1619,34 +1619,39 @@
 <td>arXiv</td>
 <td class="links"><a href="https://openreview.net/pdf?id=ydTwv5D536" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
 </tr>
-
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 skillopt: executive strategy for self-evolving agent skills arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2605.23904" rel="noopener" target="_blank">SkillOpt: Executive Strategy for Self-Evolving Agent Skills</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2605.23904" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/microsoft/SkillOpt" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 vaso: formally verifiable self-evolving skills for physical ai agents arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2606.05395" rel="noopener" target="_blank">VASO: Formally Verifiable Self-Evolving Skills for Physical AI Agents</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2606.05395" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 learning to evolve: a self-improving framework for multi-agent systems via textual parameter graph optimization acl findings" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2604.20714" rel="noopener" target="_blank">Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization</a>
-            </td>
-            <td>ACL Findings</td>
-            <td class="links"><a href="https://arxiv.org/abs/2604.20714" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        </tbody>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 skillopt: executive strategy for self-evolving agent skills arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2605.23904" rel="noopener" target="_blank">SkillOpt: Executive Strategy for Self-Evolving Agent Skills</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2605.23904" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/microsoft/SkillOpt" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 vaso: formally verifiable self-evolving skills for physical ai agents arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.05395" rel="noopener" target="_blank">VASO: Formally Verifiable Self-Evolving Skills for Physical AI Agents</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.05395" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 learning to evolve: a self-improving framework for multi-agent systems via textual parameter graph optimization acl findings" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2604.20714" rel="noopener" target="_blank">Learning to Evolve: A Self-Improving Framework for Multi-Agent Systems via Textual Parameter Graph Optimization</a>
+</td>
+<td>ACL Findings</td>
+<td class="links"><a href="https://arxiv.org/abs/2604.20714" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 learning to learn-at-test-time: language agents with learnable adaptation policies arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2604.00830" rel="noopener" target="_blank">Learning to Learn-at-Test-Time: Language Agents with Learnable Adaptation Policies</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2604.00830" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/zzzlou/meta-ttl" rel="noopener" target="_blank">Code</a></td>
+</tr>
+</tbody>
 </table>
 </div>
 </details>
@@ -1657,12 +1662,12 @@
 <h3>2.2 Memory</h3>
 <p>The agent improves what it stores, how memory is structured, and how memory is processed across interactions.</p>
 </div>
-<div class="count-badge">61 papers</div>
+<div class="count-badge">65 papers</div>
 </div>
 <details class="subgroup">
 <summary id="memory-object">
 <span>2.2.1 Memory Object</span>
-<span class="count-badge small">16 papers</span>
+<span class="count-badge small">17 papers</span>
 </summary>
 <p class="sub-desc">What is stored in memory, such as notes, summaries, trajectories, or latent states.</p>
 <div class="table-wrap">
@@ -1783,31 +1788,37 @@
 <td>ICLR</td>
 <td class="links"><a href="https://arxiv.org/abs/2508.09736" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/bytedance-seed/m3-agent" rel="noopener" target="_blank">Code</a></td>
 </tr>
-
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 thought-retriever: don't just retrieve raw data, retrieve thoughts for memory-augmented agentic systems arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2604.12231" rel="noopener" target="_blank">Thought-Retriever: Don't Just Retrieve Raw Data, Retrieve Thoughts for Memory-Augmented Agentic Systems</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2604.12231" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 better with experience: self-evolving llm agents for evidence-grounded health community notes arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2606.02215" rel="noopener" target="_blank">Better with Experience: Self-Evolving LLM Agents for Evidence-Grounded Health Community Notes</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2606.02215" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        </tbody>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 thought-retriever: don't just retrieve raw data, retrieve thoughts for memory-augmented agentic systems arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2604.12231" rel="noopener" target="_blank">Thought-Retriever: Don't Just Retrieve Raw Data, Retrieve Thoughts for Memory-Augmented Agentic Systems</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2604.12231" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 better with experience: self-evolving llm agents for evidence-grounded health community notes arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.02215" rel="noopener" target="_blank">Better with Experience: Self-Evolving LLM Agents for Evidence-Grounded Health Community Notes</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.02215" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 agon: an autonomous large-scale omnidisciplinary research system built on prompt economy arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.24177" rel="noopener" target="_blank">Agon: An Autonomous Large-Scale Omnidisciplinary Research System Built on Prompt Economy</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.24177" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/AutoResearch-Factory/Agon" rel="noopener" target="_blank">Code</a></td>
+</tr>
+</tbody>
 </table>
 </div>
 </details><details class="subgroup">
 <summary id="memory-structure">
 <span>2.2.2 Memory Structure</span>
-<span class="count-badge small">23 papers</span>
+<span class="count-badge small">25 papers</span>
 </summary>
 <p class="sub-desc">How memory is organized, indexed, retrieved, or represented over time.</p>
 <div class="table-wrap">
@@ -1856,7 +1867,7 @@
 <td>ACM MobiCom</td>
 <td class="links"><a href="https://arxiv.org/abs/2312.03003" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/mobilegptsys/MobileGPT" rel="noopener" target="_blank">Code</a></td>
 </tr>
-<tr class="paper-row" data-branch="scaffolding" data-search="2025 scm: enhancing large language model with self-controlled memory framework dasfaa" data-year="2025">
+<tr class="paper-row" data-branch="scaffolding" data-search="2024 scene-driven multimodal knowledge graph construction for embodied ai ieee tkde scene-mmkg manipmob-mmkg" data-year="2024"><td class="year">2024</td><td class="title-cell"><a href="https://arxiv.org/abs/2311.03783" rel="noopener" target="_blank">Scene-Driven Multimodal Knowledge Graph Construction for Embodied AI</a></td><td>IEEE TKDE</td><td class="links"><a href="https://arxiv.org/abs/2311.03783" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td></tr><tr class="paper-row" data-branch="scaffolding" data-search="2025 scm: enhancing large language model with self-controlled memory framework dasfaa" data-year="2025">
 <td class="year">2025</td>
 <td class="title-cell">
 <a href="https://arxiv.org/abs/2304.13343" rel="noopener" target="_blank">SCM: Enhancing Large Language Model with Self-Controlled Memory Framework</a>
@@ -1960,58 +1971,61 @@
 <td>ICLR</td>
 <td class="links"><a href="https://openreview.net/pdf?id=CjXaMI2kUH" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/frechele/MrSteve" rel="noopener" target="_blank">Code</a></td>
 </tr>
-
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 evolvemem: self-evolving memory architecture via autoresearch for llm agents arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2605.13941" rel="noopener" target="_blank">EvolveMem: Self-Evolving Memory Architecture via AutoResearch for LLM Agents</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2605.13941" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/aiming-lab/SimpleMem" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 sage: a self-evolving agentic graph-memory engine for structure-aware associative memory arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2605.12061" rel="noopener" target="_blank">SAGE: A Self-Evolving Agentic Graph-Memory Engine for Structure-Aware Associative Memory</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2605.12061" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 prism: an evolutionary memory substrate for multi-agent open-ended discovery arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2604.19795" rel="noopener" target="_blank">Prism: An Evolutionary Memory Substrate for Multi-Agent Open-Ended Discovery</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2604.19795" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 decentmem: self-evolving multi-agent systems via decentralized memory arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2605.22721" rel="noopener" target="_blank">DecentMem: Self-Evolving Multi-Agent Systems via Decentralized Memory</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2605.22721" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 exg: self-evolving agents with experience graphs arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2605.17721" rel="noopener" target="_blank">EXG: Self-Evolving Agents with Experience Graphs</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2605.17721" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        </tbody>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 evolvemem: self-evolving memory architecture via autoresearch for llm agents arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2605.13941" rel="noopener" target="_blank">EvolveMem: Self-Evolving Memory Architecture via AutoResearch for LLM Agents</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2605.13941" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/aiming-lab/SimpleMem" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 sage: a self-evolving agentic graph-memory engine for structure-aware associative memory arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2605.12061" rel="noopener" target="_blank">SAGE: A Self-Evolving Agentic Graph-Memory Engine for Structure-Aware Associative Memory</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2605.12061" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 prism: an evolutionary memory substrate for multi-agent open-ended discovery arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2604.19795" rel="noopener" target="_blank">Prism: An Evolutionary Memory Substrate for Multi-Agent Open-Ended Discovery</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2604.19795" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 decentmem: self-evolving multi-agent systems via decentralized memory arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2605.22721" rel="noopener" target="_blank">DecentMem: Self-Evolving Multi-Agent Systems via Decentralized Memory</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2605.22721" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 exg: self-evolving agents with experience graphs arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2605.17721" rel="noopener" target="_blank">EXG: Self-Evolving Agents with Experience Graphs</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2605.17721" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 clag: adaptive memory organization via agent-driven clustering for small language model agents acl findings" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2603.15421" rel="noopener" target="_blank">CLAG: Adaptive Memory Organization via Agent-Driven Clustering for Small Language Model Agents</a>
+</td>
+<td>ACL Findings</td>
+<td class="links"><a href="https://arxiv.org/abs/2603.15421" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/dmis-lab/CLAG" rel="noopener" target="_blank">Code</a></td>
+</tr>
+</tbody>
 </table>
 </div>
 </details><details class="subgroup">
 <summary id="memory-processing">
 <span>2.2.3 Memory Processing</span>
-<span class="count-badge small">22 papers</span>
+<span class="count-badge small">23 papers</span>
 </summary>
 <p class="sub-desc">How memory is created, updated, compressed, retrieved, and otherwise processed over time.</p>
 <div class="table-wrap">
@@ -2132,7 +2146,7 @@
 <td>arXiv</td>
 <td class="links"><a href="https://arxiv.org/abs/2503.21760" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
 </tr>
-<tr class="paper-row" data-branch="scaffolding" data-search="2026 agentic context engineering: evolving contexts for self-improving language models iclr" data-year="2026">
+<tr class="paper-row" data-branch="scaffolding" data-search="2025 pbft-backed semantic voting for multi-agent memory pruning arxiv co-forgetting protocol" data-year="2025"><td class="year">2025</td><td class="title-cell"><a href="https://arxiv.org/abs/2506.17338" rel="noopener" target="_blank">PBFT-Backed Semantic Voting for Multi-Agent Memory Pruning</a></td><td>arXiv</td><td class="links"><a href="https://arxiv.org/abs/2506.17338" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/DngBack/co-forget-protocol" rel="noopener" target="_blank">Code</a></td></tr><tr class="paper-row" data-branch="scaffolding" data-search="2026 agentic context engineering: evolving contexts for self-improving language models iclr" data-year="2026">
 <td class="year">2026</td>
 <td class="title-cell">
 <a href="https://arxiv.org/abs/2510.04618" rel="noopener" target="_blank">Agentic Context Engineering: Evolving Contexts for Self-Improving Language Models</a>
@@ -2148,61 +2162,55 @@
 <td>arXiv</td>
 <td class="links"><a href="https://arxiv.org/abs/2601.03192" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/MemTensor/MemRL" rel="noopener" target="_blank">Code</a></td>
 </tr>
-
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 tmem: scaling self-evolving agents via parametric memory arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2606.04536" rel="noopener" target="_blank">TMEM: Scaling Self-Evolving Agents via Parametric Memory</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2606.04536" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 memq: integrating q-learning into self-evolving memory agents over provenance dags arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2605.08374" rel="noopener" target="_blank">MemQ: Integrating Q-Learning into Self-Evolving Memory Agents over Provenance DAGs</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2605.08374" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/jwliao-ai/MemQ" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 memory beyond recall: a dual-process cognitive memory system for self-evolving llm agents arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2606.09483" rel="noopener" target="_blank">Memory Beyond Recall: A Dual-Process Cognitive Memory System for Self-Evolving LLM Agents</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2606.09483" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 ael: agent evolving learning for open-ended environments arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2604.21725" rel="noopener" target="_blank">AEL: Agent Evolving Learning for Open-Ended Environments</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2604.21725" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/WujiangXu/AEL" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 metis: bridging text and code memory for self-evolving agents arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2606.24151" rel="noopener" target="_blank">Metis: Bridging Text and Code Memory for Self-Evolving Agents</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2606.24151" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 mem^2evolve: towards self-evolving agents via co-evolutionary capability expansion and experience distillation acl" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2604.10923" rel="noopener" target="_blank">Mem^2Evolve: Towards Self-Evolving Agents via Co-Evolutionary Capability Expansion and Experience Distillation</a>
-            </td>
-            <td>ACL</td>
-            <td class="links"><a href="https://arxiv.org/abs/2604.10923" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/BUAA-IRIP-LLM/Mem2Evolve" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        </tbody>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 tmem: scaling self-evolving agents via parametric memory arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.04536" rel="noopener" target="_blank">TMEM: Scaling Self-Evolving Agents via Parametric Memory</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.04536" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 memq: integrating q-learning into self-evolving memory agents over provenance dags arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2605.08374" rel="noopener" target="_blank">MemQ: Integrating Q-Learning into Self-Evolving Memory Agents over Provenance DAGs</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2605.08374" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/jwliao-ai/MemQ" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 memory beyond recall: a dual-process cognitive memory system for self-evolving llm agents arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.09483" rel="noopener" target="_blank">Memory Beyond Recall: A Dual-Process Cognitive Memory System for Self-Evolving LLM Agents</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.09483" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 ael: agent evolving learning for open-ended environments arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2604.21725" rel="noopener" target="_blank">AEL: Agent Evolving Learning for Open-Ended Environments</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2604.21725" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/WujiangXu/AEL" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 metis: bridging text and code memory for self-evolving agents arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.24151" rel="noopener" target="_blank">Metis: Bridging Text and Code Memory for Self-Evolving Agents</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.24151" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 mem^2evolve: towards self-evolving agents via co-evolutionary capability expansion and experience distillation acl" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2604.10923" rel="noopener" target="_blank">Mem^2Evolve: Towards Self-Evolving Agents via Co-Evolutionary Capability Expansion and Experience Distillation</a>
+</td>
+<td>ACL</td>
+<td class="links"><a href="https://arxiv.org/abs/2604.10923" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/BUAA-IRIP-LLM/Mem2Evolve" rel="noopener" target="_blank">Code</a></td>
+</tr>
+</tbody>
 </table>
 </div>
 </details>
@@ -2213,7 +2221,7 @@
 <h3>2.3 Tool</h3>
 <p>The agent improves which tools it uses, how tools are routed, and whether it can refine or create new tools itself.</p>
 </div>
-<div class="count-badge">50 papers</div>
+<div class="count-badge">51 papers</div>
 </div>
 <details class="subgroup" open="">
 <summary id="tool-routing">
@@ -2403,25 +2411,23 @@
 <td>ICLR</td>
 <td class="links"><a href="https://arxiv.org/abs/2510.05592" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/lupantech/AgentFlow" rel="noopener" target="_blank">Code</a></td>
 </tr>
-
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 genericagent: a token-efficient self-evolving llm agent via contextual information density maximization arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2604.17091" rel="noopener" target="_blank">GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2604.17091" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/lsdefine/GenericAgent" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 andes: agent native data evolving synthesis tool for autonomous instruction alignment arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2606.01279" rel="noopener" target="_blank">ANDES: Agent Native Data Evolving Synthesis Tool for Autonomous Instruction Alignment</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2606.01279" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/zzy1127/ANDES" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        </tbody>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 genericagent: a token-efficient self-evolving llm agent via contextual information density maximization arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2604.17091" rel="noopener" target="_blank">GenericAgent: A Token-Efficient Self-Evolving LLM Agent via Contextual Information Density Maximization</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2604.17091" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/lsdefine/GenericAgent" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 andes: agent native data evolving synthesis tool for autonomous instruction alignment arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.01279" rel="noopener" target="_blank">ANDES: Agent Native Data Evolving Synthesis Tool for Autonomous Instruction Alignment</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.01279" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/zzy1127/ANDES" rel="noopener" target="_blank">Code</a></td>
+</tr>
+</tbody>
 </table>
 </div>
 </details><details class="subgroup">
@@ -2492,49 +2498,45 @@
 <td>arXiv</td>
 <td class="links"><a href="https://arxiv.org/abs/2412.14841" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
 </tr>
-
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 rewardharness: self-evolving agentic post-training arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2605.08703" rel="noopener" target="_blank">RewardHarness: Self-Evolving Agentic Post-Training</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2605.08703" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/TIGER-AI-Lab/RewardHarness" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 muse-autoskill: self-evolving agents via skill creation, memory, management, and evaluation arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2605.27366" rel="noopener" target="_blank">MUSE-Autoskill: Self-Evolving Agents via Skill Creation, Memory, Management, and Evaluation</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2605.27366" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 codeskill: learning self-evolving skills for coding agents arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2605.25430" rel="noopener" target="_blank">CODESKILL: Learning Self-Evolving Skills for Coding Agents</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2605.25430" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 pfagent: a tractable and self-evolving power-flow agent for interactive grid analysis arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2604.10846" rel="noopener" target="_blank">PFAgent: A Tractable and Self-Evolving Power-Flow Agent for Interactive Grid Analysis</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2604.10846" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        </tbody>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 rewardharness: self-evolving agentic post-training arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2605.08703" rel="noopener" target="_blank">RewardHarness: Self-Evolving Agentic Post-Training</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2605.08703" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/TIGER-AI-Lab/RewardHarness" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 muse-autoskill: self-evolving agents via skill creation, memory, management, and evaluation arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2605.27366" rel="noopener" target="_blank">MUSE-Autoskill: Self-Evolving Agents via Skill Creation, Memory, Management, and Evaluation</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2605.27366" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 codeskill: learning self-evolving skills for coding agents arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2605.25430" rel="noopener" target="_blank">CODESKILL: Learning Self-Evolving Skills for Coding Agents</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2605.25430" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 pfagent: a tractable and self-evolving power-flow agent for interactive grid analysis arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2604.10846" rel="noopener" target="_blank">PFAgent: A Tractable and Self-Evolving Power-Flow Agent for Interactive Grid Analysis</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2604.10846" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+</tbody>
 </table>
 </div>
 </details><details class="subgroup">
 <summary id="tool-create">
 <span>2.3.3 Autonomous Tool Creation</span>
-<span class="count-badge small">15 papers</span>
+<span class="count-badge small">16 papers</span>
 </summary>
 <p class="sub-desc">Generating or assembling new tools, services, or agent capabilities on demand.</p>
 <div class="table-wrap">
@@ -2631,43 +2633,47 @@
 <td>arXiv</td>
 <td class="links"><a href="https://arxiv.org/abs/2506.12508" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
 </tr>
-
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 openskill: open-world self-evolution for llm agents arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2606.06741" rel="noopener" target="_blank">OpenSkill: Open-World Self-Evolution for LLM Agents</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2606.06741" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/OpenLAIR/OpenSkill" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 evods: self-evolving autonomous data science agent with skill learning and context management arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2606.03841" rel="noopener" target="_blank">EvoDS: Self-Evolving Autonomous Data Science Agent with Skill Learning and Context Management</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2606.03841" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/usail-hkust/EvoDS" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 autonomous evolution of eda tools: multi-agent self-evolved abc dac" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2604.15082" rel="noopener" target="_blank">Autonomous Evolution of EDA Tools: Multi-Agent Self-Evolved ABC</a>
-            </td>
-            <td>DAC</td>
-            <td class="links"><a href="https://arxiv.org/abs/2604.15082" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 coevoskills: self-evolving agent skills via co-evolutionary verification arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2604.01687" rel="noopener" target="_blank">CoEvoSkills: Self-Evolving Agent Skills via Co-Evolutionary Verification</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2604.01687" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/Zhang-Henry/CoEvoSkills" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        </tbody>
+<tr class="paper-row" data-branch="scaffolding" data-search="2025 enhancing open-domain task-solving capability of llms via autonomous tool integration from github acl" data-year="2025">
+<td class="year">2025</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2312.17294" rel="noopener" target="_blank">Enhancing Open-Domain Task-Solving Capability of LLMs via Autonomous Tool Integration from GitHub</a>
+</td>
+<td>ACL</td>
+<td class="links"><a href="https://arxiv.org/abs/2312.17294" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/OpenBMB/OpenAct" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 openskill: open-world self-evolution for llm agents arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.06741" rel="noopener" target="_blank">OpenSkill: Open-World Self-Evolution for LLM Agents</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.06741" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/OpenLAIR/OpenSkill" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 evods: self-evolving autonomous data science agent with skill learning and context management arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.03841" rel="noopener" target="_blank">EvoDS: Self-Evolving Autonomous Data Science Agent with Skill Learning and Context Management</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.03841" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/usail-hkust/EvoDS" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 autonomous evolution of eda tools: multi-agent self-evolved abc dac" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2604.15082" rel="noopener" target="_blank">Autonomous Evolution of EDA Tools: Multi-Agent Self-Evolved ABC</a>
+</td>
+<td>DAC</td>
+<td class="links"><a href="https://arxiv.org/abs/2604.15082" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 coevoskills: self-evolving agent skills via co-evolutionary verification arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2604.01687" rel="noopener" target="_blank">CoEvoSkills: Self-Evolving Agent Skills via Co-Evolutionary Verification</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2604.01687" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/Zhang-Henry/CoEvoSkills" rel="noopener" target="_blank">Code</a></td>
+</tr>
+</tbody>
 </table>
 </div>
 </details>
@@ -2678,7 +2684,7 @@
 <h3>2.4 Full Scaffolding</h3>
 <p>The most ambitious setting: the agent revises its own broader operational logic or executable scaffold.</p>
 </div>
-<div class="count-badge">18 papers</div>
+<div class="count-badge">21 papers</div>
 </div>
 <div class="table-wrap">
 <table class="paper-table">
@@ -2790,55 +2796,179 @@
 <td>arXiv</td>
 <td class="links"><a href="https://arxiv.org/abs/2601.01126" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/andborth/RoboPhD" rel="noopener" target="_blank">Code</a></td>
 </tr>
-
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 adaptive auto-harness: sustained self-improvement for agentic system deployment on open-ended task streams arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2606.01770" rel="noopener" target="_blank">Adaptive Auto-Harness: Sustained Self-Improvement for Agentic System Deployment on Open-Ended Task Streams</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2606.01770" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/A-EVO-Lab/AdaptiveHarness" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 moss: self-evolution through source-level rewriting in autonomous agent systems arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2605.22794" rel="noopener" target="_blank">MOSS: Self-Evolution through Source-Level Rewriting in Autonomous Agent Systems</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2605.22794" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/hkgai-official/Moss" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 recursive self-evolving agents via held-out selection arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2606.28374" rel="noopener" target="_blank">Recursive Self-Evolving Agents via Held-Out Selection</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2606.28374" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 continual harness: online adaptation for self-improving foundation agents arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2605.09998" rel="noopener" target="_blank">Continual Harness: Online Adaptation for Self-Improving Foundation Agents</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2605.09998" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/sethkarten/continual-harness" rel="noopener" target="_blank">Code</a></td>
-          </tr>
-        
-          <tr class="paper-row" data-branch="scaffolding" data-search="2026 the red queen gödel machine: co-evolving agents and their evaluators arxiv" data-year="2026">
-            <td class="year">2026</td>
-            <td class="title-cell">
-              <a href="https://arxiv.org/abs/2606.26294" rel="noopener" target="_blank">The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators</a>
-            </td>
-            <td>arXiv</td>
-            <td class="links"><a href="https://arxiv.org/abs/2606.26294" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
-          </tr>
-        </tbody>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 adaptive auto-harness: sustained self-improvement for agentic system deployment on open-ended task streams arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.01770" rel="noopener" target="_blank">Adaptive Auto-Harness: Sustained Self-Improvement for Agentic System Deployment on Open-Ended Task Streams</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.01770" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/A-EVO-Lab/AdaptiveHarness" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 moss: self-evolution through source-level rewriting in autonomous agent systems arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2605.22794" rel="noopener" target="_blank">MOSS: Self-Evolution through Source-Level Rewriting in Autonomous Agent Systems</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2605.22794" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/hkgai-official/Moss" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 recursive self-evolving agents via held-out selection arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.28374" rel="noopener" target="_blank">Recursive Self-Evolving Agents via Held-Out Selection</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.28374" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 continual harness: online adaptation for self-improving foundation agents arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2605.09998" rel="noopener" target="_blank">Continual Harness: Online Adaptation for Self-Improving Foundation Agents</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2605.09998" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/sethkarten/continual-harness" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 the red queen gödel machine: co-evolving agents and their evaluators arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2606.26294" rel="noopener" target="_blank">The Red Queen Gödel Machine: Co-Evolving Agents and Their Evaluators</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2606.26294" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 group-evolving agents: open-ended self-improvement via experience sharing arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2602.04837" rel="noopener" target="_blank">Group-Evolving Agents: Open-Ended Self-Improvement via Experience Sharing</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2602.04837" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 hyperagents arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2603.19461" rel="noopener" target="_blank">Hyperagents</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2603.19461" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/facebookresearch/Hyperagents" rel="noopener" target="_blank">Code</a></td>
+</tr>
+<tr class="paper-row" data-branch="scaffolding" data-search="2026 harness-r1: learning to edit executable runtime harnesses from agent failure trajectories arxiv" data-year="2026">
+<td class="year">2026</td>
+<td class="title-cell">
+<a href="https://arxiv.org/abs/2608.02276" rel="noopener" target="_blank">Harness-R1: Learning to Edit Executable Runtime Harnesses from Agent Failure Trajectories</a>
+</td>
+<td>arXiv</td>
+<td class="links"><a href="https://arxiv.org/abs/2608.02276" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/DeepExperience/Harness-R1" rel="noopener" target="_blank">Code</a></td>
+</tr>
+</tbody>
 </table>
 </div>
 </div>
+</section>
+<section id="evaluation">
+<h2>Evaluation &amp; Benchmarking</h2>
+<p>Evaluation and benchmark literature aligned with the survey repository and taxonomy figure. This section contains 59 categorized entries. A benchmark may intentionally appear in more than one subsection because the evaluation taxonomy is multi-perspective.</p>
+<h3>Measuring Improvement</h3>
+<details class="subgroup" open="">
+<summary><span>Metric-Based Measurement</span><span class="count-badge small">14 entries</span></summary>
+<div class="table-wrap"><table class="paper-table"><thead><tr><th>Year</th><th>Title</th><th>Venue</th><th>Links</th></tr></thead><tbody>
+<tr class="benchmark-row"><td class="year">2023</td><td class="title-cell"><a href="https://arxiv.org/abs/2306.06070" rel="noopener" target="_blank">Mind2Web: Towards a Generalist Agent for the Web</a></td><td>NeurIPS</td><td class="links"><a href="https://arxiv.org/abs/2306.06070" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/OSU-NLP-Group/Mind2Web" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2023</td><td class="title-cell"><a href="https://openreview.net/forum?id=b_CQDy9vrD1" rel="noopener" target="_blank">ManiSkill2: A Unified Benchmark for Generalizable Manipulation Skills</a></td><td>ICLR</td><td class="links"><a href="https://openreview.net/forum?id=b_CQDy9vrD1" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/mani-skill/ManiSkill" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://openreview.net/forum?id=BsMMc4MEGS" rel="noopener" target="_blank">CORE-Bench: Fostering the Credibility of Published Research Through a Computational Reproducibility Agent Benchmark</a></td><td>TMLR</td><td class="links"><a href="https://openreview.net/forum?id=BsMMc4MEGS" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/siegelz/core-bench" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://arxiv.org/abs/2410.06992" rel="noopener" target="_blank">SWE-Bench+: Enhanced Coding Benchmark for LLMs</a></td><td>arXiv</td><td class="links"><a href="https://arxiv.org/abs/2410.06992" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://openreview.net/forum?id=mUSPhG4uDW" rel="noopener" target="_blank">WebLINX: Real-World Website Navigation with Multi-Turn Dialogue</a></td><td>ICML</td><td class="links"><a href="https://openreview.net/forum?id=mUSPhG4uDW" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/McGill-NLP/weblinx" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://openreview.net/forum?id=fibxvahvs3" rel="noopener" target="_blank">GAIA: A Benchmark for General AI Assistants</a></td><td>ICLR</td><td class="links"><a href="https://openreview.net/forum?id=fibxvahvs3" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://openreview.net/forum?id=jp3gWrMuIZ" rel="noopener" target="_blank">MINT: Evaluating LLMs in Multi-Turn Interaction with Tools and Language Feedback</a></td><td>ICLR</td><td class="links"><a href="https://openreview.net/forum?id=jp3gWrMuIZ" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/xingyaoww/mint-bench" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://openreview.net/forum?id=BRfqYrikdo" rel="noopener" target="_blank">WorkArena: How Capable Are Web Agents at Solving Common Knowledge Work Tasks?</a></td><td>ICML</td><td class="links"><a href="https://openreview.net/forum?id=BRfqYrikdo" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/ServiceNow/WorkArena" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2025</td><td class="title-cell"><a href="https://arxiv.org/abs/2406.04151" rel="noopener" target="_blank">AgentGym: Evolving Large Language Model-Based Agents across Diverse Environments</a></td><td>ACL</td><td class="links"><a href="https://arxiv.org/abs/2406.04151" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/WooooDyy/AgentGym" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2025</td><td class="title-cell"><a href="https://arxiv.org/abs/2508.18993" rel="noopener" target="_blank">GitTaskBench: A Benchmark for Code Agents Solving Real-World Tasks Through Code Repository Leveraging</a></td><td>arXiv</td><td class="links"><a href="https://arxiv.org/abs/2508.18993" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/QuantaAlpha/GitTaskBench" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2025</td><td class="title-cell"><a href="https://arxiv.org/abs/2412.13178" rel="noopener" target="_blank">SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents</a></td><td>arXiv</td><td class="links"><a href="https://arxiv.org/abs/2412.13178" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/shengyin1224/SafeAgentBench" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2026</td><td class="title-cell"><a href="https://arxiv.org/abs/2503.23804" rel="noopener" target="_blank">DrunkAgent: Stealthy Memory Corruption in LLM-Powered Recommender Agents</a></td><td>WWW</td><td class="links"><a href="https://arxiv.org/abs/2503.23804" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td></tr>
+<tr class="benchmark-row"><td class="year">2026</td><td class="title-cell"><a href="https://openreview.net/forum?id=MuCDzH0ctf" rel="noopener" target="_blank">ST-WebAgentBench: A Benchmark for Evaluating Safety and Trustworthiness in Web Agents</a></td><td>ICLR</td><td class="links"><a href="https://openreview.net/forum?id=MuCDzH0ctf" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/segev-shlomov/ST-WebAgentBench" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2026</td><td class="title-cell"><a href="https://arxiv.org/abs/2601.08613" rel="noopener" target="_blank">ClawBench: A Benchmark for Evaluating AI Agents on Real-World Online Tasks</a></td><td>arXiv</td><td class="links"><a href="https://arxiv.org/abs/2601.08613" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/TIGER-AI-Lab/ClawBench" rel="noopener" target="_blank">Code</a></td></tr>
+</tbody></table></div>
+</details>
+<details class="subgroup" open="">
+<summary><span>Judge-Based Measurement</span><span class="count-badge small">5 entries</span></summary>
+<div class="table-wrap"><table class="paper-table"><thead><tr><th>Year</th><th>Title</th><th>Venue</th><th>Links</th></tr></thead><tbody>
+<tr class="benchmark-row"><td class="year">2025</td><td class="title-cell"><a href="https://arxiv.org/abs/2410.10934" rel="noopener" target="_blank">Agent-as-a-Judge: Evaluate Agents with Agents</a></td><td>ICML</td><td class="links"><a href="https://arxiv.org/abs/2410.10934" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/metauto-ai/agent-as-a-judge" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2025</td><td class="title-cell"><a href="https://aclanthology.org/2025.acl-long.374/" rel="noopener" target="_blank">Evaluation Agent: Efficient and Promptable Evaluation Framework for Visual Generative Models</a></td><td>ACL</td><td class="links"><a href="https://aclanthology.org/2025.acl-long.374/" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/Vchitect/Evaluation-Agent" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2025</td><td class="title-cell"><a href="https://openreview.net/forum?id=erGpkHCybv" rel="noopener" target="_blank">EvalAgent: Discovering Implicit Evaluation Criteria from the Web</a></td><td>COLM</td><td class="links"><a href="https://openreview.net/forum?id=erGpkHCybv" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/ManyaWadhwa/EvalAgent" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2025</td><td class="title-cell"><a href="https://aclanthology.org/2025.findings-acl.494/" rel="noopener" target="_blank">Learning to Align Multi-Faceted Evaluation: A Unified and Robust Framework (ARJudge)</a></td><td>ACL Findings</td><td class="links"><a href="https://aclanthology.org/2025.findings-acl.494/" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td></tr>
+<tr class="benchmark-row"><td class="year">2025</td><td class="title-cell"><a href="https://aclanthology.org/2025.findings-emnlp.891/" rel="noopener" target="_blank">VerifiAgent: A Unified Verification Agent in Language Model Reasoning</a></td><td>EMNLP Findings</td><td class="links"><a href="https://aclanthology.org/2025.findings-emnlp.891/" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/Jiuzhouh/VerifiAgent" rel="noopener" target="_blank">Code</a></td></tr>
+</tbody></table></div>
+</details>
+<h3 style="margin-top:24px;">Benchmarking Improvement</h3>
+<details class="subgroup" open="">
+<summary><span>Mechanism Benchmarks</span><span class="count-badge small">9 entries</span></summary>
+<p class="sub-desc"><strong>Foundation-Model-Level</strong></p>
+<div class="table-wrap"><table class="paper-table"><thead><tr><th>Year</th><th>Title</th><th>Venue</th><th>Links</th></tr></thead><tbody>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://arxiv.org/abs/2410.06992" rel="noopener" target="_blank">SWE-Bench+: Enhanced Coding Benchmark for LLMs</a></td><td>arXiv</td><td class="links"><a href="https://arxiv.org/abs/2410.06992" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://openreview.net/forum?id=GEcwtMk1uA" rel="noopener" target="_blank">Identifying the Risks of LM Agents with an LM-Emulated Sandbox</a></td><td>ICLR</td><td class="links"><a href="https://openreview.net/forum?id=GEcwtMk1uA" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/ryoungj/ToolEmu" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2025</td><td class="title-cell"><a href="https://arxiv.org/abs/2508.18993" rel="noopener" target="_blank">GitTaskBench: A Benchmark for Code Agents Solving Real-World Tasks Through Code Repository Leveraging</a></td><td>arXiv</td><td class="links"><a href="https://arxiv.org/abs/2508.18993" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/QuantaAlpha/GitTaskBench" rel="noopener" target="_blank">Code</a></td></tr>
+</tbody></table></div>
+<p class="sub-desc"><strong>Scaffold-Level</strong></p>
+<div class="table-wrap"><table class="paper-table"><thead><tr><th>Year</th><th>Title</th><th>Venue</th><th>Links</th></tr></thead><tbody>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://openreview.net/forum?id=jp3gWrMuIZ" rel="noopener" target="_blank">MINT: Evaluating LLMs in Multi-Turn Interaction with Tools and Language Feedback</a></td><td>ICLR</td><td class="links"><a href="https://openreview.net/forum?id=jp3gWrMuIZ" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/xingyaoww/mint-bench" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://arxiv.org/abs/2311.18760" rel="noopener" target="_blank">TaskBench: Benchmarking Large Language Models for Task Automation</a></td><td>NeurIPS</td><td class="links"><a href="https://arxiv.org/abs/2311.18760" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/microsoft/JARVIS/tree/main/taskbench" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://arxiv.org/abs/2310.03128" rel="noopener" target="_blank">MetaTool Benchmark for Large Language Models: Deciding Whether to Use Tools and Which to Use</a></td><td>ICLR</td><td class="links"><a href="https://arxiv.org/abs/2310.03128" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/HowieHwong/MetaTool" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2025</td><td class="title-cell"><a href="https://openreview.net/forum?id=2GmDdhBdDk" rel="noopener" target="_blank">The Berkeley Function Calling Leaderboard (BFCL): From Tool Use to Agentic Evaluation of Large Language Models</a></td><td>ICML</td><td class="links"><a href="https://openreview.net/forum?id=2GmDdhBdDk" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2026</td><td class="title-cell"><a href="https://arxiv.org/abs/2503.23804" rel="noopener" target="_blank">DrunkAgent: Stealthy Memory Corruption in LLM-Powered Recommender Agents</a></td><td>WWW</td><td class="links"><a href="https://arxiv.org/abs/2503.23804" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td></tr>
+<tr class="benchmark-row"><td class="year">2026</td><td class="title-cell">RSI-Bench: Multi-Axis Benchmark for Recursive Self-Improvement</td><td>GitHub</td><td class="links"><span class="muted-link">Paper</span> · <a href="https://github.com/sunghunkwag/rsi-bench" rel="noopener" target="_blank">Code</a></td></tr>
+</tbody></table></div>
+</details>
+<details class="subgroup" open="">
+<summary><span>Domain Benchmarks</span><span class="count-badge small">31 entries</span></summary>
+<p class="sub-desc"><strong>Software Engineering</strong></p>
+<div class="table-wrap"><table class="paper-table"><thead><tr><th>Year</th><th>Title</th><th>Venue</th><th>Links</th></tr></thead><tbody>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://openreview.net/forum?id=VTF8yNQM66" rel="noopener" target="_blank">SWE-bench: Can Language Models Resolve Real-World GitHub Issues?</a></td><td>ICLR</td><td class="links"><a href="https://openreview.net/forum?id=VTF8yNQM66" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/SWE-bench/SWE-bench" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://arxiv.org/abs/2410.06992" rel="noopener" target="_blank">SWE-Bench+: Enhanced Coding Benchmark for LLMs</a></td><td>arXiv</td><td class="links"><a href="https://arxiv.org/abs/2410.06992" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://openreview.net/forum?id=9Y8zUO11EQ" rel="noopener" target="_blank">SWT-Bench: Testing and Validating Real-World Bug-Fixes with Code Agents</a></td><td>NeurIPS</td><td class="links"><a href="https://openreview.net/forum?id=9Y8zUO11EQ" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/logic-star-ai/swt-bench" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://arxiv.org/abs/2412.02883" rel="noopener" target="_blank">TDD-Bench Verified: Can LLMs Generate Tests for Issues Before They Get Resolved?</a></td><td>arXiv</td><td class="links"><a href="https://arxiv.org/abs/2412.02883" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/IBM/TDD-Bench-Verified" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2025</td><td class="title-cell"><a href="https://arxiv.org/abs/2511.13998" rel="noopener" target="_blank">LoCoBench-Agent: An Interactive Benchmark for LLM Agents in Long-Context Software Engineering</a></td><td>arXiv</td><td class="links"><a href="https://arxiv.org/abs/2511.13998" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/SalesforceAIResearch/LoCoBench-Agent" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2025</td><td class="title-cell"><a href="https://arxiv.org/abs/2410.10934" rel="noopener" target="_blank">DevAI: Automated AI Development Benchmark</a></td><td>ICML</td><td class="links"><a href="https://arxiv.org/abs/2410.10934" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/metauto-ai/agent-as-a-judge" rel="noopener" target="_blank">Code</a></td></tr>
+</tbody></table></div>
+<p class="sub-desc"><strong>Web Navigation</strong></p>
+<div class="table-wrap"><table class="paper-table"><thead><tr><th>Year</th><th>Title</th><th>Venue</th><th>Links</th></tr></thead><tbody>
+<tr class="benchmark-row"><td class="year">2023</td><td class="title-cell"><a href="https://arxiv.org/abs/2306.06070" rel="noopener" target="_blank">Mind2Web: Towards a Generalist Agent for the Web</a></td><td>NeurIPS</td><td class="links"><a href="https://arxiv.org/abs/2306.06070" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/OSU-NLP-Group/Mind2Web" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://openreview.net/forum?id=oKn9c6ytLx" rel="noopener" target="_blank">WebArena: A Realistic Web Environment for Building Autonomous Agents</a></td><td>ICLR</td><td class="links"><a href="https://openreview.net/forum?id=oKn9c6ytLx" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/web-arena-x/webarena" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://openreview.net/forum?id=RPKxrKTJbj" rel="noopener" target="_blank">VisualWebArena: Evaluating Multimodal Agents on Realistic Visual Web Tasks</a></td><td>ICLR Workshop</td><td class="links"><a href="https://openreview.net/forum?id=RPKxrKTJbj" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/web-arena-x/visualwebarena" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://arxiv.org/abs/2406.12373" rel="noopener" target="_blank">WebCanvas: Benchmarking Web Agents in Online Environments</a></td><td>ICML Workshop</td><td class="links"><a href="https://arxiv.org/abs/2406.12373" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/iMeanAI/WebCanvas" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2026</td><td class="title-cell"><a href="https://openreview.net/forum?id=MuCDzH0ctf" rel="noopener" target="_blank">ST-WebAgentBench: A Benchmark for Evaluating Safety and Trustworthiness in Web Agents</a></td><td>ICLR</td><td class="links"><a href="https://openreview.net/forum?id=MuCDzH0ctf" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/segev-shlomov/ST-WebAgentBench" rel="noopener" target="_blank">Code</a></td></tr>
+</tbody></table></div>
+<p class="sub-desc"><strong>Gaming &amp; Strategy</strong></p>
+<div class="table-wrap"><table class="paper-table"><thead><tr><th>Year</th><th>Title</th><th>Venue</th><th>Links</th></tr></thead><tbody>
+<tr class="benchmark-row"><td class="year">2023</td><td class="title-cell"><a href="https://aclanthology.org/2023.emnlp-main.689/" rel="noopener" target="_blank">clembench: Using Game Play to Evaluate Chat-Optimized Language Models as Conversational Agents</a></td><td>EMNLP</td><td class="links"><a href="https://aclanthology.org/2023.emnlp-main.689/" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/clp-research/clembench" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://arxiv.org/abs/2405.20859" rel="noopener" target="_blank">clembench-2024: A Challenging, Dynamic, Complementary, Multilingual Benchmark and Underlying Flexible Framework for LLMs as Multi-Action Agents</a></td><td>arXiv</td><td class="links"><a href="https://arxiv.org/abs/2405.20859" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/clp-research/clembench" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://arxiv.org/abs/2406.06613" rel="noopener" target="_blank">GameBench: Evaluating Strategic Reasoning Abilities of LLM Agents</a></td><td>NeurIPS Workshop</td><td class="links"><a href="https://arxiv.org/abs/2406.06613" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/Joshuaclymer/GameBench" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://openreview.net/forum?id=eE1WHn6qlk" rel="noopener" target="_blank">LLM-Deliberation: Evaluating LLMs with Interactive Multi-Agent Negotiation Game</a></td><td>ICLR Workshop</td><td class="links"><a href="https://openreview.net/forum?id=eE1WHn6qlk" rel="noopener" target="_blank">Paper</a> · <span class="muted-link">Code</span></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://arxiv.org/abs/2402.12348" rel="noopener" target="_blank">GTBench: Uncovering the Strategic Reasoning Capabilities of LLMs via Game-Theoretic Evaluations</a></td><td>NeurIPS</td><td class="links"><a href="https://arxiv.org/abs/2402.12348" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/jinhaoduan/GTBench" rel="noopener" target="_blank">Code</a></td></tr>
+</tbody></table></div>
+<p class="sub-desc"><strong>Scientific Discovery</strong></p>
+<div class="table-wrap"><table class="paper-table"><thead><tr><th>Year</th><th>Title</th><th>Venue</th><th>Links</th></tr></thead><tbody>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://openreview.net/forum?id=BsMMc4MEGS" rel="noopener" target="_blank">CORE-Bench: Fostering the Credibility of Published Research Through a Computational Reproducibility Agent Benchmark</a></td><td>TMLR</td><td class="links"><a href="https://openreview.net/forum?id=BsMMc4MEGS" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/siegelz/core-bench" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://openreview.net/forum?id=cDYqckEt6d" rel="noopener" target="_blank">DiscoveryWorld: A Virtual Environment for Developing and Evaluating Automated Scientific Discovery Agents</a></td><td>NeurIPS Datasets &amp; Benchmarks</td><td class="links"><a href="https://openreview.net/forum?id=cDYqckEt6d" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/allenai/discoveryworld" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2025</td><td class="title-cell"><a href="https://arxiv.org/abs/2504.01848" rel="noopener" target="_blank">PaperBench: Evaluating AI's Ability to Replicate AI Research</a></td><td>arXiv</td><td class="links"><a href="https://arxiv.org/abs/2504.01848" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/openai/frontier-evals/tree/main/project/paperbench" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2025</td><td class="title-cell"><a href="https://openreview.net/forum?id=w8uII2qAmd" rel="noopener" target="_blank">PhysGym: Benchmarking LLMs in Interactive Physics Discovery with Controlled Priors</a></td><td>NeurIPS Datasets &amp; Benchmarks</td><td class="links"><a href="https://openreview.net/forum?id=w8uII2qAmd" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/principia-ai/PhysGym" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2026</td><td class="title-cell"><a href="https://openreview.net/forum?id=M7TNf5J26u" rel="noopener" target="_blank">AstaBench: Rigorous Benchmarking of AI Agents with a Scientific Research Suite</a></td><td>ICLR</td><td class="links"><a href="https://openreview.net/forum?id=M7TNf5J26u" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/allenai/asta-bench" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2026</td><td class="title-cell"><a href="https://arxiv.org/abs/2605.08678" rel="noopener" target="_blank">MLS-Bench: A Holistic and Rigorous Assessment of AI Systems on Building Better AI</a></td><td>arXiv</td><td class="links"><a href="https://arxiv.org/abs/2605.08678" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/Imbernoulli/MLS-Bench" rel="noopener" target="_blank">Code</a></td></tr>
+</tbody></table></div>
+<p class="sub-desc"><strong>Embodied AI</strong></p>
+<div class="table-wrap"><table class="paper-table"><thead><tr><th>Year</th><th>Title</th><th>Venue</th><th>Links</th></tr></thead><tbody>
+<tr class="benchmark-row"><td class="year">2023</td><td class="title-cell"><a href="https://openreview.net/forum?id=b_CQDy9vrD1" rel="noopener" target="_blank">ManiSkill2: A Unified Benchmark for Generalizable Manipulation Skills</a></td><td>ICLR</td><td class="links"><a href="https://openreview.net/forum?id=b_CQDy9vrD1" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/mani-skill/ManiSkill" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2025</td><td class="title-cell"><a href="https://arxiv.org/abs/2412.13178" rel="noopener" target="_blank">SafeAgentBench: A Benchmark for Safe Task Planning of Embodied LLM Agents</a></td><td>arXiv</td><td class="links"><a href="https://arxiv.org/abs/2412.13178" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/shengyin1224/SafeAgentBench" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2025</td><td class="title-cell"><a href="https://openreview.net/forum?id=DgGF2LEBPS" rel="noopener" target="_blank">EmbodiedBench: Comprehensive Benchmarking Multi-Modal Large Language Models for Vision-Driven Embodied Agents</a></td><td>ICML</td><td class="links"><a href="https://openreview.net/forum?id=DgGF2LEBPS" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/EmbodiedBench/EmbodiedBench" rel="noopener" target="_blank">Code</a></td></tr>
+</tbody></table></div>
+<p class="sub-desc"><strong>General Computer Control</strong></p>
+<div class="table-wrap"><table class="paper-table"><thead><tr><th>Year</th><th>Title</th><th>Venue</th><th>Links</th></tr></thead><tbody>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://arxiv.org/abs/2404.07972" rel="noopener" target="_blank">OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments</a></td><td>NeurIPS</td><td class="links"><a href="https://arxiv.org/abs/2404.07972" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/xlang-ai/OSWorld" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://aclanthology.org/2024.acl-long.850/" rel="noopener" target="_blank">AppWorld: A Controllable World of Apps and People for Benchmarking Interactive Coding Agents</a></td><td>ACL</td><td class="links"><a href="https://aclanthology.org/2024.acl-long.850/" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/StonyBrookNLP/appworld" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://openreview.net/forum?id=GEcwtMk1uA" rel="noopener" target="_blank">Identifying the Risks of LM Agents with an LM-Emulated Sandbox</a></td><td>ICLR</td><td class="links"><a href="https://openreview.net/forum?id=GEcwtMk1uA" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/ryoungj/ToolEmu" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2024</td><td class="title-cell"><a href="https://arxiv.org/abs/2310.03128" rel="noopener" target="_blank">MetaTool Benchmark for Large Language Models: Deciding Whether to Use Tools and Which to Use</a></td><td>ICLR</td><td class="links"><a href="https://arxiv.org/abs/2310.03128" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/HowieHwong/MetaTool" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2025</td><td class="title-cell"><a href="https://openreview.net/forum?id=W9s817KqYf" rel="noopener" target="_blank">Windows Agent Arena: Evaluating Multi-Modal OS Agents at Scale</a></td><td>ICML</td><td class="links"><a href="https://openreview.net/forum?id=W9s817KqYf" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/microsoft/WindowsAgentArena" rel="noopener" target="_blank">Code</a></td></tr>
+<tr class="benchmark-row"><td class="year">2025</td><td class="title-cell"><a href="https://openreview.net/forum?id=2GmDdhBdDk" rel="noopener" target="_blank">The Berkeley Function Calling Leaderboard (BFCL): From Tool Use to Agentic Evaluation of Large Language Models</a></td><td>ICML</td><td class="links"><a href="https://openreview.net/forum?id=2GmDdhBdDk" rel="noopener" target="_blank">Paper</a> · <a href="https://github.com/ShishirPatil/gorilla/tree/main/berkeley-function-call-leaderboard" rel="noopener" target="_blank">Code</a></td></tr>
+</tbody></table></div>
+</details>
 </section>
 <section id="reading-guide">
 <h2>How to read this survey</h2>
@@ -2855,7 +2985,6 @@
 </div>
 </div>
 </section>
-
 <section id="community">
 <div class="community-head">
 <div>
@@ -2869,10 +2998,9 @@
 <a class="community-star-cta" href="https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents" rel="noopener" target="_blank">
 <span class="star-symbol">★</span>
 <span>Star on GitHub</span>
-<strong id="starCtaCount" aria-label="GitHub stars">—</strong>
+<strong aria-label="GitHub stars" id="starCtaCount">—</strong>
 </a>
 </div>
-
 <div class="engagement-grid">
 <article class="engagement-card">
 <h3>📈 Project pulse</h3>
@@ -2882,9 +3010,8 @@
 <div class="pulse"><strong id="githubForks">—</strong><span>Forks</span></div>
 <div class="pulse"><strong id="githubIssues">—</strong><span>Open issues</span></div>
 </div>
-<div class="pulse-status" id="repoStatsStatus" aria-live="polite">Loading live repository data…</div>
+<div aria-live="polite" class="pulse-status" id="repoStatsStatus">Loading live repository data…</div>
 </article>
-
 <article class="engagement-card">
 <h3>💬 Join the conversation</h3>
 <p>Discuss the survey and follow its public community activity.</p>
@@ -2894,18 +3021,16 @@
 <a class="community-link" href="https://huggingface.co/papers/2607.13104" rel="noopener" target="_blank"><span>Hugging Face paper page</span><span>View ↗</span></a>
 </div>
 </article>
-
 <article class="engagement-card">
 <h3>🧭 Help improve the map</h3>
 <p>Every correction and missing reference makes the survey more useful.</p>
 <div class="community-links">
-<a class="community-link primary" href="https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents/issues/new?title=%5BPaper%20Suggestion%5D%20&body=Paper%20title%3A%0AURL%3A%0ASuggested%20taxonomy%20location%3A%0AReason%20for%20inclusion%3A" rel="noopener" target="_blank"><span>Suggest a paper</span><span>Issue ↗</span></a>
+<a class="community-link primary" href="https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents/issues/new?title=%5BPaper%20Suggestion%5D%20&amp;body=Paper%20title%3A%0AURL%3A%0ASuggested%20taxonomy%20location%3A%0AReason%20for%20inclusion%3A" rel="noopener" target="_blank"><span>Suggest a paper</span><span>Issue ↗</span></a>
 <a class="community-link" href="https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents/pulls" rel="noopener" target="_blank"><span>Submit a pull request</span><span>Contribute ↗</span></a>
-<a class="community-link" href="https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents/issues/new?title=%5BCorrection%5D%20&body=Page%20or%20section%3A%0ADescription%3A%0ASuggested%20correction%3A" rel="noopener" target="_blank"><span>Report a correction</span><span>Issue ↗</span></a>
+<a class="community-link" href="https://github.com/selfimproving-agent/Awesome-Self-Improving-Agents/issues/new?title=%5BCorrection%5D%20&amp;body=Page%20or%20section%3A%0ADescription%3A%0ASuggested%20correction%3A" rel="noopener" target="_blank"><span>Report a correction</span><span>Issue ↗</span></a>
 </div>
 </article>
 </div>
-
 <div class="discussion-panel">
 <div class="discussion-copy">
 <h3>Discussion &amp; comments</h3>
@@ -2924,18 +3049,11 @@
 The comment panel appears here after the Utterances app is enabled for the repository.
 </div>
 </div>
-<script src="https://utteranc.es/client.js"
-        repo="selfimproving-agent/Awesome-Self-Improving-Agents"
-        issue-term="pathname"
-        label="website-feedback"
-        theme="github-light"
-        crossorigin="anonymous"
-        async>
+<script async="" crossorigin="anonymous" issue-term="pathname" label="website-feedback" repo="selfimproving-agent/Awesome-Self-Improving-Agents" src="https://utteranc.es/client.js" theme="github-light">
 </script>
 </div>
 </div>
 </section>
-
 <section id="authors">
 <h2>Authors</h2>
 <div class="authors">
@@ -3143,14 +3261,9 @@ The comment panel appears here after the Utterances app is enabled for the repos
       applyFilters();
     })();
   </script>
-
 <!-- Cloudflare Web Analytics -->
-<script
-  type="module"
-  src="https://static.cloudflareinsights.com/beacon.min.js"
-  data-cf-beacon='{"token":"0002692b8d4e432cbff93b3964f4b6dd"}'>
+<script data-cf-beacon='{"token":"0002692b8d4e432cbff93b3964f4b6dd"}' src="https://static.cloudflareinsights.com/beacon.min.js" type="module">
 </script>
 <!-- End Cloudflare Web Analytics -->
-
 </body>
 </html>
